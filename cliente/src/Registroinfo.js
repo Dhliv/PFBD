@@ -30,7 +30,7 @@ export const Registroinfo = () => {
 
   const idRespuesta = async () => {
     const res = await axios.post('/basedatos/getNewIdRespuesta', {});
-    console.log(res.data)
+    console.log(res.data.idRespuesta);
     setDocumento('')
     setNombre('')
     setCarrera('')
