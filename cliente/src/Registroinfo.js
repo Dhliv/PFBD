@@ -58,7 +58,7 @@ export const Registroinfo = () => {
   const getScoresByEvent = async () => {
     const res = await axios.post('/basedatos/getScoresByEvent', {});
     console.log(res.data[0])
-    console.log(res.data.length())
+    console.log(res.data.length)
     setDocumento('')
     setNombre('')
     setCarrera('')
