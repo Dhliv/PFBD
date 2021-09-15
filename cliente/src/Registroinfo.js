@@ -90,7 +90,7 @@ export const Registroinfo = () => {
 
 
   const inserta = () => {
-    idRespuesta();
+    getScoresByEvent();
   }
 
   const clear = () => {
