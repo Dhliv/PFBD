@@ -95,13 +95,8 @@ router.post('/getScoresByEvent', async (req, res) => {
   const eventsAndScores = await client.query(
     `select RP.id_evento, sum(RP.puntaje) from respuesta as R inner join resultado_preguntas as RP on RP.id_respuesta = R.id_respuesta group by RP.id_evento;`
   )
-  var arrayEventsAndScores = [];
 
-  for (const row in eventsAndScores.rows) {
-    arrayEventsAndScores.push({ "idEvento": row.id_evento, "score": row.puntaje });
-  }
-
-  res.send(eventsAndScores);
+  res.send(eventsAndScores.rows);
 });
 
 
