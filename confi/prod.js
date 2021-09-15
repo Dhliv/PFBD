@@ -1,3 +1,3 @@
 module.exports = {
-    postgresurl: process.env.DATABASE_URL,
+  postgresurl: process.env.DATABASE_URL,
 }
