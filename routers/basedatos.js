@@ -101,7 +101,7 @@ router.post('/getScoresByEvent', async (req, res) => {
     arrayEventsAndScores.push({ "idEvento": row.id_evento, "score": row.puntaje });
   }
 
-  res.send(arrayEventsAndScores);
+  res.send(eventsAndScores);
 });
 
 
