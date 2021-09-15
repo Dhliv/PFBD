@@ -1,0 +1,27 @@
+{
+  "name": "Backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "10.14.2",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "cliente": "npm start --prefix cliente",
+    "dev": "concurrently \"npm run server\" \"npm run cliente\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix cliente && npm run build --prefix cliente"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.0.1",
+    "nodemon": "^2.0.7",
+    "pg": "^8.3.3"
+  }
+}
