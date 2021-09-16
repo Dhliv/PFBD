@@ -8,9 +8,10 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "node-sass": "^5.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "latest",
+    "react-dom": "latest",
     "react-scripts": "4.0.3",
+    "survey-react": "^1.8.66",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

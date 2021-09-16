@@ -1,19 +1,19 @@
 {
   "tipadoPregunta": [
     [
-      0,
+      2,
       "Unica respuesta"
     ],
     [
-      1,
+      3,
       "multiple respuesta"
     ],
     [
-      -1,
+      1,
       "Sin subpreguntas y con única respuesta"
     ],
     [
-      -2,
+      0,
       "Sin subpreguntas y con múltiples respuestas"
     ]
   ],
@@ -29,7 +29,7 @@
   ],
   "questions": [
     {
-      "tipoPregunta": -1,
+      "tipoPregunta": 1,
       "titulo": "Género",
       "respuestas": [
         [
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "tipoPregunta": -1,
+      "tipoPregunta": 1,
       "titulo": "¿Cuántos años tiene?",
       "respuestas": [
         [
@@ -57,7 +57,7 @@
       ]
     },
     {
-      "tipoPregunta": 1,
+      "tipoPregunta": 3,
       "titulo": "Para comenzar, te voy a leer una serie de actividades de tiempo libre, me gustaría que me dijeras para cada una de ellas, si te gusta o no te gusta.",
       "preguntas": [
         "BEBER, IR DE COPAS",
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "tipoPregunta": 1,
+      "tipoPregunta": 3,
       "titulo": "Y también si la practicas o no la practicas habitualmente.",
       "preguntas": [
         "BEBER, IR DE COPAS",
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "tipoPregunta": -1,
+      "tipoPregunta": 1,
       "titulo": "De lo que ves en televisión y/o internet, ¿qué te gusta más?",
       "respuestas": [
         [
@@ -159,7 +159,7 @@
       ]
     },
     {
-      "tipoPregunta": -1,
+      "tipoPregunta": 1,
       "titulo": "¿De cuánto dinero dispones a la semana para tus gastos en las actividades de ocio que realizas?",
       "respuestas": [
         [
@@ -177,7 +177,7 @@
       ]
     },
     {
-      "tipoPregunta": -2,
+      "tipoPregunta": 0,
       "titulo": "¿con quién sueles salir habitualmente?",
       "respuestas": [
         [
@@ -211,7 +211,7 @@
       ]
     },
     {
-      "tipoPregunta": 1,
+      "tipoPregunta": 3,
       "titulo": "Vamos a hablar ahora de una serie de gastos. ¿Con qué frecuencia sueles hacer cada uno de los gastos que listan a continuación?",
       "preguntas": [
         "IR DE BARES, CAFETERÍAS",
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "tipoPregunta": 1,
+      "tipoPregunta": 3,
       "titulo": "¿Y podrías decirme, aproximadamente, cuánto dinero te gastas al mes en esa actividad de ocio?",
       "preguntas": [
         "IR DE BARES, CAFETERÍAS",
@@ -279,7 +279,7 @@
       ]
     },
     {
-      "tipoPregunta": 1,
+      "tipoPregunta": 3,
       "titulo": "Vamos a hablar ahora de una serie de cosas que puedes comprar para tu uso personal. ¿Con qué frecuencia sueles….?",
       "preguntas": [
         "IR DE BARES, CAFETERÍAS",
@@ -323,7 +323,7 @@
       ]
     },
     {
-      "tipoPregunta": 1,
+      "tipoPregunta": 3,
       "titulo": "¿Y cuánto calcula que te gastas al mes en esa compra?",
       "preguntas": [
         "IR DE BARES, CAFETERÍAS",
@@ -347,7 +347,7 @@
       ]
     },
     {
-      "tipoPregunta": -1,
+      "tipoPregunta": 1,
       "titulo": "¿Dónde vive habitualmente la mayor parte del año?",
       "respuestas": [
         [
@@ -369,7 +369,7 @@
       ]
     },
     {
-      "tipoPregunta": -1,
+      "tipoPregunta": 1,
       "titulo": "En la actualidad, ¿en cuál de las siguientes situaciones te encuentras?",
       "respuestas": [
         [
@@ -411,7 +411,7 @@
       ]
     },
     {
-      "tipoPregunta": -1,
+      "tipoPregunta": 1,
       "titulo": "¿Cuáles son los estudios de más alto nivel oficial que has cursado hasta ahora?",
       "respuestas": [
         [

@@ -13,25 +13,21 @@ const Formulario = (props) => {
   // let preguntas = questions;
 
   const jsonFormat = [[-1,
-                "titulo",
-                [ "pregunta1","pregunta2","pregunta3"],
-                [
-                  ["Si", 0, 1],
-                  ["No", 0, 2],
-                  ["No se", 0, 3]
-                ]
-              ],[-1,
-                "titulo2",
-                [ "pregunta1","pregunta2","pregunta3"],
-                [
-                  ["Si", 1, 4],
-                  ["No", 1, 5],
-                  ["No se", 1, 6]
-                ]]]
-
-  console.log(jsonFormat);
-
-  var x = 0;
+    "titulo",
+  ["pregunta1", "pregunta2", "pregunta3"],
+  [
+    ["Si", 0, 1],
+    ["No", 0, 2],
+    ["No se", 0, 3]
+  ]
+  ], [-1,
+    "titulo2",
+  ["pregunta1", "pregunta2", "pregunta3"],
+  [
+    ["Si", 1, 4],
+    ["No", 1, 5],
+    ["No se", 1, 6]
+  ]]]
 
   return (
     <section>
@@ -39,16 +35,16 @@ const Formulario = (props) => {
         {jsonFormat.map(datos =>
           <li>
             <FormatoPregunta texto={datos[1]} >
-              
+
               {datos[2].map(subPregunta =>
                 <FormatoPregunta tipo={datos[0]} texto={subPregunta}>
-                  
-                  <Respuesta respuestasYTipos={datos[3]}/>
-                  
+
+                  <Respuesta respuestasYTipos={datos[3]} />
+
                 </FormatoPregunta>
               )}
 
-              </FormatoPregunta>
+            </FormatoPregunta>
           </li>
         )}
       </ol>
