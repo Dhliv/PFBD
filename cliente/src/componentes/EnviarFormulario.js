@@ -1,25 +1,26 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-function EnviarFormulario(props){
+function EnviarFormulario(props) {
 
   const [env, setEnv] = useState("Enviar");
-  function otraF(){
-    setEnv("NO"); 
-  }
-  const enviarInformacion = () =>{
-    otraF();
+  function otraF() {
     setEnv("NO");
   }
+  const enviarInformacion = () => {
+    otraF();
+    setEnv("NO");
+    console.log("kjaasdkjasd");
+  }
 
-  return(
-    
-    <button 
-      type="submit" 
-      onClick={() => enviarInformacion} 
+  return (
+
+    <button
+      type="submit"
+      onClick={() => enviarInformacion()}
     >
-      {env} 
+      {env}
     </button>
   )
 }
 
-export {EnviarFormulario}
+export { EnviarFormulario }
