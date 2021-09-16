@@ -37,7 +37,7 @@ export const Registroinfo = () => {
     setSemestre('')
   }
 
-  const ins = async () => {
+  const insertUsuario = async () => {
     const res = await axios.post('/basedatos/insertUsuario', { "genero": 1, "edad": 21, "id_ocupacion": 1, "id_estudio": 1 });
     console.log(res.data)
     setDocumento('')
@@ -91,7 +91,9 @@ export const Registroinfo = () => {
 
 
   const inserta = () => {
-    getScoresByEvent();
+    insertResultadoPreguntas();
+    insertUsuario();
+    insertRespuesta();
   }
 
   const clear = () => {
