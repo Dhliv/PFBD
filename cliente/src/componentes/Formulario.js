@@ -1,6 +1,7 @@
 import React from "react";
-import {Pregunta} from "./Pregunta"
+import {Pregunta} from "./Pregunta";
 import { Respuesta} from "./Respuesta";
+import {EnviarFormulario} from './EnviarFormulario';
 
 // Create a new form, then add a checkbox question, a multiple choice question,
 // a page break, then a date question and a grid of questions.
@@ -20,8 +21,9 @@ const Formulario = (props) => {
                     <Respuesta respuestas={preguntaYRespuesta.splice(1,preguntaYRespuesta.length-1)}/>
                 </li>
                 )}
-        
             </ol>
+
+            <EnviarFormulario />
         </section>
     )
 };
