@@ -1,16 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 
 function EnviarFormulario(props){
 
-  function enviarInformacion(){
-    console.log("Enviar información");
+  const [env, setEnv] = useState("Enviar");
+  function otraF(){
+    setEnv("NO"); 
+  }
+  const enviarInformacion = () =>{
+    otraF();
+    setEnv("NO");
   }
 
   return(
     
     <button 
-      type="button" 
-      onClick={() => enviarInformacion} >Enviar </button>
+      type="submit" 
+      onClick={() => enviarInformacion} 
+    >
+      {env} 
+    </button>
   )
 }
 
