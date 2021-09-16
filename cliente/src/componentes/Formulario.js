@@ -1,5 +1,5 @@
 import React from "react";
-import { Pregunta } from "./Pregunta"
+import { FormatoPregunta } from "./FormatoPregunta"
 import { Respuesta } from "./Respuesta";
 import { questions } from "../json/questions.json";
 import {EnviarFormulario} from "./EnviarFormulario";
@@ -10,16 +10,45 @@ import {EnviarFormulario} from "./EnviarFormulario";
 
 const Formulario = (props) => {
 
-  let preguntas = questions;
-  // props = [[preguntas,respuestas]...[preguntas,respuestas]]
+  // let preguntas = questions;
+
+  const jsonFormat = [[-1,
+                "titulo",
+                [ "pregunta1","pregunta2","pregunta3"],
+                [
+                  ["Si", 0, 1],
+                  ["No", 0, 2],
+                  ["No se", 0, 3]
+                ]
+              ],[-1,
+                "titulo2",
+                [ "pregunta1","pregunta2","pregunta3"],
+                [
+                  ["Si", 1, 4],
+                  ["No", 1, 5],
+                  ["No se", 1, 6]
+                ]]]
+
+  console.log(jsonFormat);
+
+  var x = 0;
 
   return (
     <section>
       <ol>
-        {preguntas.map(preguntaYRespuesta =>
+        {jsonFormat.map(datos =>
           <li>
-            <Pregunta key={preguntaYRespuesta[0]} pregunta={preguntaYRespuesta[0]} />
-            <Respuesta respuestas={preguntaYRespuesta.splice(1, preguntaYRespuesta.length - 1)} />
+            <FormatoPregunta texto={datos[1]} >
+              
+              {datos[2].map(subPregunta =>
+                <FormatoPregunta tipo={datos[0]} texto={subPregunta}>
+                  
+                  <Respuesta respuestasYTipos={datos[3]}/>
+                  
+                </FormatoPregunta>
+              )}
+
+              </FormatoPregunta>
           </li>
         )}
       </ol>
@@ -29,3 +58,15 @@ const Formulario = (props) => {
 };
 
 export { Formulario };
+
+
+// [
+//   tipo, // -1
+//   titulo,
+//   [
+//     preguntas // ""
+//   ]
+//   [
+//     respuestas, tipoRespuesta // (dinero, 1), (ns, 0), (nc, 0);
+//   ]
+// ]

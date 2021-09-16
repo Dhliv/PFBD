@@ -3,11 +3,10 @@ import React, {useState} from "react";
 function EnviarFormulario(props){
 
   const [env, setEnv] = useState("Enviar");
-  function otraF(){
-    setEnv("NO"); 
-  }
+  
+
+  
   const enviarInformacion = () =>{
-    otraF();
     setEnv("NO");
   }
 
@@ -15,7 +14,7 @@ function EnviarFormulario(props){
     
     <button 
       type="submit" 
-      onClick={() => enviarInformacion} 
+      onClick={() => enviarInformacion()} 
     >
       {env} 
     </button>

@@ -2,19 +2,19 @@ import React from "react";
 
 function Respuesta(props){
 
+  console.log("respuestas: " + props.respuestasYTipos);
+  const tipo = "radio";
 
   return(
-    <React.Fragment>
+    <form>
       {
-        props.respuestas.map(respuesta =>
-        <ul>
-          <label>
-            <input type="checkbox" /> {respuesta}
-          </label>
+        props.respuestasYTipos.map(respuestaYTipo =>
+        <ul >
+            <input type={tipo} /> {respuestaYTipo[0]}
         </ul>
         
         )}
-    </React.Fragment>  
+    </form>  
     
   )
 }
