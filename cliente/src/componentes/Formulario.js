@@ -8,7 +8,7 @@ import { Respuesta} from "./Respuesta";
 
 const Formulario = (props) => {
     
-    preguntas = props.preguntas;
+    let preguntas = props.preguntas;
     // props = [[preguntas,respuestas]...[preguntas,respuestas]]
 
     return(
@@ -16,8 +16,8 @@ const Formulario = (props) => {
             <ol>
             {preguntas.map(preguntaYRespuesta =>
                 <li>
-                    <Pregunta pregunta={preguntaYRespuesta[0]}/>
-                    <Respuesta preguntaYRespuestas={preguntaYRespuesta}/>
+                    <Pregunta key={preguntaYRespuesta[0]} pregunta={preguntaYRespuesta[0]}/>
+                    <Respuesta respuestas={preguntaYRespuesta.splice(1,preguntaYRespuesta.length-1)}/>
                 </li>
                 )}
         
