@@ -26,21 +26,22 @@ router.post('/recibirFormulario', async (req, res) => {
 
   const { datosPersonales, respuestas } = req.body;
 
-  await insertarDatosPersonales(datosPersonales);
-  await insertarRespuestas(respuestas);
+  await InsertarDatosPersonales(datosPersonales);
+  await InsertarRespuestas(respuestas);
 
   console.log("Guardación exitosa");
-
+  
+  res.send(console.log("xd"));
 })
 
 
-function insertarDatosPersonales(datosPersonales) {
+function InsertarDatosPersonales(datosPersonales) {
   client.query(``);
   client.query(``);
   client.query(``);
 }
 
-function insertarRespuestas(respuestas) {
+function InsertarRespuestas(respuestas) {
   client.query(``);
   client.query(``);
   client.query(``);
@@ -54,6 +55,8 @@ router.post('/insertRespuesta', async (req, res) => {
   await client.query(
     `insert into respuesta values('${usuarioID}', '${idRespuesta}');`
   )
+  
+  res.send(console.log("xd"));
 })
 
 /**
@@ -74,6 +77,7 @@ router.post('/insertResultadoPreguntas', async (req, res) => {
   await client.query(
     `insert into resultado_preguntas values('${idRespuesta}', '${idEvento}', '${score}');`
   );
+  res.send(console.log("xd"));
 });
 
 /**
