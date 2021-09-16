@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-
 import axios from 'axios'
+import { questions } from "./json/questions.json";
+
 export const Registroinfo = () => {
 
   const [documento, setDocumento] = useState('')
@@ -91,9 +92,7 @@ export const Registroinfo = () => {
 
 
   const inserta = () => {
-    insertResultadoPreguntas();
-    insertUsuario();
-    insertRespuesta();
+    let respuestas = [];
   }
 
   const clear = () => {

@@ -1,176 +1,460 @@
 {
-  "questions": [
+  "tipadoPregunta": [
     [
-      "Género",
-      "Hombre",
-      "Mujer",
-      "Nc"
+      0,
+      "Unica respuesta"
     ],
     [
-      "¿Cuántos años tiene?",
-      "____ Años"
+      1,
+      "multiple respuesta"
     ],
     [
-      "Para comenzar, te voy a leer una serie de actividades de tiempo libre, me gustaría que me dijeras para cada una de ellas, si te gusta o no te gusta.",
-      "Si",
-      "No",
-      "Nc",
-      "BEBER, IR DE COPAS",
-      "IR A DISCOTECAS, BAILAR",
-      "HACER DEPORTE",
-      "ASISTIR A COMPETICIONES DEPORTIVAS",
-      "IR AL CINE",
-      "IR AL TEATRO",
-      "IR A CONCIERTOS",
-      "ESCUCHAR MÚSICA, CD, CINTAS",
-      "IR A MUSEOS, EXPOSICIONES",
-      "ASISTIR A CONFERENCIAS, COLOQUIOS",
-      "LEER LIBROS",
-      "Pasear a tu mascota"
+      -1,
+      "Sin subpreguntas y con única respuesta"
     ],
     [
-      "Y también si la practicas o no la practicas habitualmente.",
-      "Si",
-      "No",
-      "Nc",
-      "BEBER, IR DE COPAS",
-      "IR A DISCOTECAS, BAILAR",
-      "HACER DEPORTE",
-      "ASISTIR A COMPETICIONES DEPORTIVAS",
-      "IR AL CINE",
-      "IR AL TEATRO",
-      "IR A CONCIERTOS",
-      "ESCUCHAR MÚSICA, CD, CINTAS",
-      "IR A MUSEOS, EXPOSICIONES",
-      "ASISTIR A CONFERENCIAS, COLOQUIOS",
-      "LEER LIBROS",
-      "Pasear a tu mascota"
-    ],
-    [
-      "De lo que ves en televisión y/o internet, ¿qué te gusta más?",
-      "Películas, cine",
-      "Formativos, educativos, culturales",
-      "Informativos, de noticias, de actualidad",
-      "Deportes",
-      "Musicales",
-      "De dibujos; infantiles; juveniles",
-      "Nada",
-      "Sin contestación"
-    ],
-    [
-      "¿De cuánto dinero dispones a la semana para tus gastos en las actividades de ocio que realizas?",
-      "_____________ $",
-      "No sabe",
-      "Sin contestación"
-    ],
-    [
-      "¿con quién sueles salir habitualmente?",
-      "solo",
-      "Con tu cónyuge, pareja, novio/a",
-      "Con tus padres",
-      "Con familiares con los que no vive habitualmente",
-      "Con un grupo de amigos",
-      "Con el centro escolar",
-      "NC"
-    ],
-    [
-      "Vamos a hablar ahora de una serie de gastos. ¿Con qué frecuencia sueles hacer cada uno de los gastos que listan a continuación?",
-      "A diario",
-      "Varias veces por semana",
-      "Una vez por semana",
-      "Una vez al mes",
-      "Menos de una vez al mes",
-      "Nunca",
-      "No sabe",
-      "Sin contestación",
-      "IR DE BARES, CAFETERÍAS",
-      "IR A DISCOTECAS, SALAS DE BAILE",
-      "IR AL CINE",
-      "IR A TEATRO",
-      "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
-      "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
-      "USAR INSTALACIONES DEPORTIVAS",
-      "Comprar libros."
-    ],
-    [
-      "¿Y podrías decirme, aproximadamente, cuánto dinero te gastas al mes en esa actividad de ocio?",
-      "______ $",
-      "Ns",
-      "Nc",
-      "IR DE BARES, CAFETERÍAS",
-      "IR A DISCOTECAS, SALAS DE BAILE",
-      "IR AL CINE",
-      "IR A TEATRO",
-      "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
-      "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
-      "USAR INSTALACIONES DEPORTIVAS",
-      "Comprar libros"
-    ],
-    [
-      "Vamos a hablar ahora de una serie de cosas que puedes comprar para tu uso personal. ¿Con qué frecuencia sueles….?",
-      "A diario",
-      "Varias veces por semana",
-      "Una vez por semana",
-      "Una vez al mes",
-      "Menos de una vez al mes",
-      "Nunca",
-      "No sabe",
-      "Sin contestación",
-      "IR DE BARES, CAFETERÍAS",
-      "IR A DISCOTECAS, SALAS DE BAILE",
-      "IR AL CINE",
-      "IR A TEATRO",
-      "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
-      "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
-      "USAR INSTALACIONES DEPORTIVAS",
-      "Comprar libros"
-    ],
-    [
-      "¿Y cuánto calcula que te gastas al mes en esa compra?",
-      "______ $",
-      "Ns",
-      "Nc",
-      "IR DE BARES, CAFETERÍAS",
-      "IR A DISCOTECAS, SALAS DE BAILE",
-      "IR AL CINE",
-      "IR A TEATRO",
-      "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
-      "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
-      "USAR INSTALACIONES DEPORTIVAS",
-      "Comprar libros"
-    ],
-    [
-      "¿Dónde vive habitualmente la mayor parte del año?",
-      "En el domicilio de la familia de origen (con los padres o con alguno de ellos)",
-      "En un hogar propio, independiente de la familia de origen",
-      "Compartiendo vivienda con otras personas (piso compartido, residencia, etc.)",
-      "No contesta"
-    ],
-    [
-      "En la actualidad, ¿en cuál de las siguientes situaciones te encuentras?",
-      "Sólo estudia",
-      "Trabaja y estudia",
-      "Sólo trabaja",
-      "Está parado, pero ha trabajado antes",
-      "Busca su primer empleo",
-      "Se dedica a las tareas del hogar",
-      "Realiza labores de voluntariado social",
-      "No puede trabajar (invalidez, incapacidad)",
-      "No contesta"
-    ],
-    [
-      "¿Cuáles son los estudios de más alto nivel oficial que has cursado hasta ahora?",
-      "Universitarios Superiores",
-      "Universitarios Medios",
-      "Tecnólogo",
-      "Bachiller",
-      "Tecnico en algo",
-      "Secundaria, Artes-Oficios o similares",
-      "Primaria Completa",
-      "Primaria Incompleta",
-      "No sabe",
-      "No contesta"
+      -2,
+      "Sin subpreguntas y con múltiples respuestas"
     ]
   ],
-  "nombre": "asjbaksjdba"
+  "tipadoRespuesta": [
+    [
+      0,
+      "Cerrada"
+    ],
+    [
+      1,
+      "Abierta"
+    ]
+  ],
+  "questions": [
+    {
+      "tipoPregunta": -1,
+      "titulo": "Género",
+      "respuestas": [
+        [
+          "Hombre",
+          0
+        ],
+        [
+          "Mujer",
+          0
+        ],
+        [
+          "Nc",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": -1,
+      "titulo": "¿Cuántos años tiene?",
+      "respuestas": [
+        [
+          "Años",
+          1
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": 1,
+      "titulo": "Para comenzar, te voy a leer una serie de actividades de tiempo libre, me gustaría que me dijeras para cada una de ellas, si te gusta o no te gusta.",
+      "preguntas": [
+        "BEBER, IR DE COPAS",
+        "IR A DISCOTECAS, BAILAR",
+        "HACER DEPORTE",
+        "ASISTIR A COMPETICIONES DEPORTIVAS",
+        "IR AL CINE",
+        "IR AL TEATRO",
+        "IR A CONCIERTOS",
+        "ESCUCHAR MÚSICA, CD, CINTAS",
+        "IR A MUSEOS, EXPOSICIONES",
+        "ASISTIR A CONFERENCIAS, COLOQUIOS",
+        "LEER LIBROS",
+        "Pasear a tu mascota"
+      ],
+      "respuestas": [
+        [
+          "Si",
+          0
+        ],
+        [
+          "No",
+          0
+        ],
+        [
+          "Nc",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": 1,
+      "titulo": "Y también si la practicas o no la practicas habitualmente.",
+      "preguntas": [
+        "BEBER, IR DE COPAS",
+        "IR A DISCOTECAS, BAILAR",
+        "HACER DEPORTE",
+        "ASISTIR A COMPETICIONES DEPORTIVAS",
+        "IR AL CINE",
+        "IR AL TEATRO",
+        "IR A CONCIERTOS",
+        "ESCUCHAR MÚSICA, CD, CINTAS",
+        "IR A MUSEOS, EXPOSICIONES",
+        "ASISTIR A CONFERENCIAS, COLOQUIOS",
+        "LEER LIBROS",
+        "Pasear a tu mascota"
+      ],
+      "respuestas": [
+        [
+          "Si",
+          0
+        ],
+        [
+          "No",
+          0
+        ],
+        [
+          "Nc",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": -1,
+      "titulo": "De lo que ves en televisión y/o internet, ¿qué te gusta más?",
+      "respuestas": [
+        [
+          "Películas, cine",
+          0
+        ],
+        [
+          "Formativos, educativos, culturales",
+          0
+        ],
+        [
+          "Informativos, de noticias, de actualidad",
+          0
+        ],
+        [
+          "Deportes",
+          0
+        ],
+        [
+          "Musicales",
+          0
+        ],
+        [
+          "De dibujos; infantiles; juveniles",
+          0
+        ],
+        [
+          "Nada",
+          0
+        ],
+        [
+          "Sin contestación",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": -1,
+      "titulo": "¿De cuánto dinero dispones a la semana para tus gastos en las actividades de ocio que realizas?",
+      "respuestas": [
+        [
+          "$",
+          1
+        ],
+        [
+          "No sabe",
+          0
+        ],
+        [
+          "Sin contestación",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": -2,
+      "titulo": "¿con quién sueles salir habitualmente?",
+      "respuestas": [
+        [
+          "solo",
+          0
+        ],
+        [
+          "Con tu cónyuge, pareja, novio/a",
+          0
+        ],
+        [
+          "Con tus padres",
+          0
+        ],
+        [
+          "Con familiares con los que no vive habitualmente",
+          0
+        ],
+        [
+          "Con un grupo de amigos",
+          0
+        ],
+        [
+          "Con el centro escolar",
+          0
+        ],
+        [
+          "NC",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": 1,
+      "titulo": "Vamos a hablar ahora de una serie de gastos. ¿Con qué frecuencia sueles hacer cada uno de los gastos que listan a continuación?",
+      "preguntas": [
+        "IR DE BARES, CAFETERÍAS",
+        "IR A DISCOTECAS, SALAS DE BAILE",
+        "IR AL CINE",
+        "IR A TEATRO",
+        "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
+        "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
+        "USAR INSTALACIONES DEPORTIVAS",
+        "Comprar libros."
+      ],
+      "respuestas": [
+        [
+          "A diario",
+          0
+        ],
+        [
+          "Varias veces por semana",
+          0
+        ],
+        [
+          "Una vez por semana",
+          0
+        ],
+        [
+          "Una vez al mes",
+          0
+        ],
+        [
+          "Menos de una vez al mes",
+          0
+        ],
+        [
+          "Nunca",
+          0
+        ],
+        [
+          "No sabe",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": 1,
+      "titulo": "¿Y podrías decirme, aproximadamente, cuánto dinero te gastas al mes en esa actividad de ocio?",
+      "preguntas": [
+        "IR DE BARES, CAFETERÍAS",
+        "IR A DISCOTECAS, SALAS DE BAILE",
+        "IR AL CINE",
+        "IR A TEATRO",
+        "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
+        "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
+        "USAR INSTALACIONES DEPORTIVAS",
+        "Comprar libros."
+      ],
+      "respuestas": [
+        [
+          "$",
+          0
+        ],
+        [
+          "Ns",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": 1,
+      "titulo": "Vamos a hablar ahora de una serie de cosas que puedes comprar para tu uso personal. ¿Con qué frecuencia sueles….?",
+      "preguntas": [
+        "IR DE BARES, CAFETERÍAS",
+        "IR A DISCOTECAS, SALAS DE BAILE",
+        "IR AL CINE",
+        "IR A TEATRO",
+        "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
+        "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
+        "USAR INSTALACIONES DEPORTIVAS",
+        "Comprar libros."
+      ],
+      "respuestas": [
+        [
+          "A diario",
+          0
+        ],
+        [
+          "Varias veces por semana",
+          0
+        ],
+        [
+          "Una vez por semana",
+          0
+        ],
+        [
+          "Una vez al mes",
+          0
+        ],
+        [
+          "Menos de una vez al mes",
+          0
+        ],
+        [
+          "Nunca",
+          0
+        ],
+        [
+          "No sabe",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": 1,
+      "titulo": "¿Y cuánto calcula que te gastas al mes en esa compra?",
+      "preguntas": [
+        "IR DE BARES, CAFETERÍAS",
+        "IR A DISCOTECAS, SALAS DE BAILE",
+        "IR AL CINE",
+        "IR A TEATRO",
+        "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
+        "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
+        "USAR INSTALACIONES DEPORTIVAS",
+        "Comprar libros."
+      ],
+      "respuestas": [
+        [
+          "$",
+          0
+        ],
+        [
+          "Ns",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": -1,
+      "titulo": "¿Dónde vive habitualmente la mayor parte del año?",
+      "respuestas": [
+        [
+          "En el domicilio de la familia de origen (con los padres o con alguno de ellos)",
+          0
+        ],
+        [
+          "En un hogar propio, independiente de la familia de origen",
+          0
+        ],
+        [
+          "Compartiendo vivienda con otras personas (piso compartido, residencia, etc.)",
+          0
+        ],
+        [
+          "No contesta",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": -1,
+      "titulo": "En la actualidad, ¿en cuál de las siguientes situaciones te encuentras?",
+      "respuestas": [
+        [
+          "Sólo estudia",
+          0
+        ],
+        [
+          "Trabaja y estudia",
+          0
+        ],
+        [
+          "Sólo trabaja",
+          0
+        ],
+        [
+          "Está parado, pero ha trabajado antes",
+          0
+        ],
+        [
+          "Busca su primer empleo",
+          0
+        ],
+        [
+          "Se dedica a las tareas del hogar",
+          0
+        ],
+        [
+          "Realiza labores de voluntariado social",
+          0
+        ],
+        [
+          "No puede trabajar (invalidez, incapacidad)",
+          0
+        ],
+        [
+          "No contesta",
+          0
+        ]
+      ]
+    },
+    {
+      "tipoPregunta": -1,
+      "titulo": "¿Cuáles son los estudios de más alto nivel oficial que has cursado hasta ahora?",
+      "respuestas": [
+        [
+          "Universitarios Superiores",
+          0
+        ],
+        [
+          "Universitarios Medios",
+          0
+        ],
+        [
+          "Tecnólogo",
+          0
+        ],
+        [
+          "Bachiller",
+          0
+        ],
+        [
+          "Técnico",
+          0
+        ],
+        [
+          "Secundaria, Artes-Oficios o similares",
+          0
+        ],
+        [
+          "Primaria Completa",
+          0
+        ],
+        [
+          "Primaria Incompleta",
+          0
+        ],
+        [
+          "No sabe",
+          0
+        ],
+        [
+          "No contesta",
+          0
+        ]
+      ]
+    }
+  ]
 }
