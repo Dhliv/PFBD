@@ -91,7 +91,7 @@ export const Registroinfo = () => {
 
 
   const inserta = () => {
-    getScoresByEvent();
+    insertResultadoPreguntas();
   }
 
   const clear = () => {

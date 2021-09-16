@@ -30,7 +30,7 @@ router.post('/recibirFormulario', async (req, res) => {
   await InsertarRespuestas(respuestas);
 
   console.log("Guardación exitosa");
-  
+
   res.send(console.log("xd"));
 })
 
@@ -55,7 +55,7 @@ router.post('/insertRespuesta', async (req, res) => {
   await client.query(
     `insert into respuesta values('${usuarioID}', '${idRespuesta}');`
   )
-  
+
   res.send(console.log("xd"));
 })
 
@@ -81,7 +81,7 @@ router.post('/insertResultadoPreguntas', async (req, res) => {
 });
 
 /**
- * Inserta un nuevo usuario en la base de datos y retorna el ID asigando a él.
+ * Inserta un nuevo usuario en la base de datos y retorna el ID asignado a él.
  */
 router.post('/insertUsuario', async (req, res) => {
   const { genero, edad, id_ocupacion, id_estudio } = req.body;
@@ -95,6 +95,9 @@ router.post('/insertUsuario', async (req, res) => {
   res.send({ "idUsuario": aux.id_usuario });
 });
 
+/**
+ * Obtiene el puntaje total obtenido por evento.
+ */
 router.post('/getScoresByEvent', async (req, res) => {
   const eventsAndScores = await client.query(
     `select RP.id_evento, sum(RP.puntaje) from respuesta as R inner join resultado_preguntas as RP on RP.id_respuesta = R.id_respuesta group by RP.id_evento;`
