@@ -62,7 +62,7 @@
     },
     {
       "tipoPregunta": 2,
-      "titulo": "Para comenzar, te voy a leer una serie de actividades de tiempo libre, me gustaría que me dijeras para cada una de ellas, si te gusta o no te gusta.",
+      "titulo": "Las preguntas {} me gustaría que respondiera si te gusta o no la actividad.",
       "preguntas": [
         "BEBER, IR DE COPAS",
         "IR A DISCOTECAS, BAILAR",
