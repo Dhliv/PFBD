@@ -34,7 +34,7 @@
   "questions": [
     {
       "tipoPregunta": 1,
-      "titulo": "Género",
+      "titulo": "Indique su género",
       "respuestas": [
         [
           "Hombre",
@@ -52,7 +52,7 @@
     },
     {
       "tipoPregunta": 4,
-      "titulo": "¿Cuántos años tiene?",
+      "titulo": "Qué edad tiene?",
       "respuestas": [
         [
           "Años",
@@ -177,7 +177,7 @@
       "titulo": "¿con quién sueles salir habitualmente?",
       "respuestas": [
         [
-          "solo",
+          "Solo",
           0
         ],
         [
@@ -201,7 +201,7 @@
           0
         ],
         [
-          "NC",
+          "No Contesta",
           0
         ]
       ]
