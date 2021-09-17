@@ -15,16 +15,20 @@
     [
       0,
       "Sin subpreguntas y con múltiples respuestas"
+    ],
+    [
+      4,
+      "Pregunta Abierta"
     ]
   ],
   "tipadoRespuesta": [
     [
       0,
-      "Cerrada"
+      "No Aplica"
     ],
     [
       1,
-      "Abierta"
+      "Number"
     ]
   ],
   "questions": [
@@ -41,13 +45,13 @@
           0
         ],
         [
-          "Nc",
+          "No Binario",
           0
         ]
       ]
     },
     {
-      "tipoPregunta": 1,
+      "tipoPregunta": 4,
       "titulo": "¿Cuántos años tiene?",
       "respuestas": [
         [
@@ -57,7 +61,7 @@
       ]
     },
     {
-      "tipoPregunta": 3,
+      "tipoPregunta": 2,
       "titulo": "Para comenzar, te voy a leer una serie de actividades de tiempo libre, me gustaría que me dijeras para cada una de ellas, si te gusta o no te gusta.",
       "preguntas": [
         "BEBER, IR DE COPAS",
@@ -83,13 +87,13 @@
           0
         ],
         [
-          "Nc",
+          "No Contesta",
           0
         ]
       ]
     },
     {
-      "tipoPregunta": 3,
+      "tipoPregunta": 2,
       "titulo": "Y también si la practicas o no la practicas habitualmente.",
       "preguntas": [
         "BEBER, IR DE COPAS",
@@ -115,7 +119,7 @@
           0
         ],
         [
-          "Nc",
+          "No Contesta",
           0
         ]
       ]
@@ -159,20 +163,12 @@
       ]
     },
     {
-      "tipoPregunta": 1,
+      "tipoPregunta": 4,
       "titulo": "¿De cuánto dinero dispones a la semana para tus gastos en las actividades de ocio que realizas?",
       "respuestas": [
         [
           "$",
           1
-        ],
-        [
-          "No sabe",
-          0
-        ],
-        [
-          "Sin contestación",
-          0
         ]
       ]
     },
@@ -211,7 +207,7 @@
       ]
     },
     {
-      "tipoPregunta": 3,
+      "tipoPregunta": 2,
       "titulo": "Vamos a hablar ahora de una serie de gastos. ¿Con qué frecuencia sueles hacer cada uno de los gastos que listan a continuación?",
       "preguntas": [
         "IR DE BARES, CAFETERÍAS",
@@ -255,7 +251,7 @@
       ]
     },
     {
-      "tipoPregunta": 3,
+      "tipoPregunta": 4,
       "titulo": "¿Y podrías decirme, aproximadamente, cuánto dinero te gastas al mes en esa actividad de ocio?",
       "preguntas": [
         "IR DE BARES, CAFETERÍAS",
@@ -270,16 +266,12 @@
       "respuestas": [
         [
           "$",
-          0
-        ],
-        [
-          "Ns",
-          0
+          1
         ]
       ]
     },
     {
-      "tipoPregunta": 3,
+      "tipoPregunta": 2,
       "titulo": "Vamos a hablar ahora de una serie de cosas que puedes comprar para tu uso personal. ¿Con qué frecuencia sueles….?",
       "preguntas": [
         "IR DE BARES, CAFETERÍAS",
@@ -323,7 +315,7 @@
       ]
     },
     {
-      "tipoPregunta": 3,
+      "tipoPregunta": 4,
       "titulo": "¿Y cuánto calcula que te gastas al mes en esa compra?",
       "preguntas": [
         "IR DE BARES, CAFETERÍAS",
@@ -338,11 +330,7 @@
       "respuestas": [
         [
           "$",
-          0
-        ],
-        [
-          "Ns",
-          0
+          1
         ]
       ]
     },
