@@ -1,5 +1,5 @@
 import React from "react";
-import { FormatoPregunta } from "./FormatoPregunta"
+import FormatoPregunta from "./FormatoPregunta"
 import { Respuesta } from "./Respuesta";
 import { questions } from "../json/questions.json";
 import { EnviarFormulario } from "./EnviarFormulario";

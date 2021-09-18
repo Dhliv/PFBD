@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import * as Survey from "survey-react";
 
 import "survey-react/survey.css";
-import "./index.css";
 import neoQ from "../json/neoQ.json";
-import { questions } from "../json/questions.json"
+import { questions } from "../json/questions.json";
 
-Survey.StylesManager.applyTheme("default");
+Survey.StylesManager.applyTheme("bootstrap");
+Survey.defaultBootstrapCss.navigationButton = "btn btn-red";
 
 var tipoPregunta = ["checkbox", "radiogroup", "radiogroup", "checkbox", "text"];
 var titulo;
@@ -15,7 +15,7 @@ const CHECKBOX = 3;
 const CHECKBOX2 = 2;
 
 function addQuestion(posTitulo, posPregunta) {
-  
+
   const tipo = tipoPregunta[questions[posTitulo].tipoPregunta];
   titulo = questions[posTitulo].titulo;
   const respuesta = posPregunta !== -1 ? questions[posTitulo].preguntas[posPregunta] : "";
@@ -44,36 +44,32 @@ function addQuestion(posTitulo, posPregunta) {
 }
 
 
-function createJson(){
+function createJson() {
 
   var aux = {
-    title: titulo,
+    title: "",
     questions: []
   };
-  
+
 
   for (let i = 0; i < questions.length; i++) {
     let nP = questions[i].tipoPregunta;
     if (nP === CHECKBOX || nP === CHECKBOX2) {
 
+      if (aux != { title: "", questions: [] }) {
+        neoQ.pages = neoQ.pages.concat(aux);
+        aux = { title: "", questions: [] };
+      }
+
       for (let j = 0; j < questions[i].preguntas.length; j++) {
         aux.questions = aux.questions.concat(addQuestion(i, j));
       }
+      aux.title = titulo;
       neoQ.pages = neoQ.pages.concat(aux);
-      
-      aux = {
-        title: titulo,
-        questions: []
-      };
+
+      aux = { title: "", questions: [] };
     } else {
-      
       aux.questions = aux.questions.concat(addQuestion(i, -1));
-      neoQ.pages = neoQ.pages.concat(aux);
-      
-      aux = {
-        title: titulo,
-        questions: []
-      };
     }
   }
 }
@@ -82,14 +78,13 @@ function SurveyComponent() {
 
   createJson();
   const survey = new Survey.Model(neoQ);
-  console.log(neoQ);
 
-    return(
-      <Survey.Survey model={survey} />
-      );
+  return (
+    <Survey.Survey model={survey} />
+  );
 }
 
-export {SurveyComponent};
+export { SurveyComponent };
 
 
 
@@ -137,5 +132,5 @@ export {SurveyComponent};
         }
     ]
 };
- * 
+ *
  */

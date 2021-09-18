@@ -1,15 +1,14 @@
-import React from "react";
+import { React } from "react";
 import { Respuesta } from "./Respuesta";
 
-function FormatoPregunta(props){
+function FormatoPregunta(props) {
 
-
-  return(
+  return (
     <React.Fragment>
       <h2>{props.texto}</h2>
       <ul>{props.children}</ul>
     </React.Fragment>
   );
-} 
+}
 
-export {FormatoPregunta};
+export { FormatoPregunta }
