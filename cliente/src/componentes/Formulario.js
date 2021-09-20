@@ -1,5 +1,4 @@
 import React from "react";
-import FormatoPregunta from "./FormatoPregunta"
 import { Respuesta } from "./Respuesta";
 import { questions } from "../json/questions.json";
 import { EnviarFormulario } from "./EnviarFormulario";
@@ -29,7 +28,7 @@ const Formulario = (props) => {
     ["No se", 1, 6]
   ]]]
 
-  return (
+  /*return (
     <section>
       <ol>
         {jsonFormat.map(datos =>
@@ -50,7 +49,7 @@ const Formulario = (props) => {
       </ol>
       <EnviarFormulario />
     </section>
-  )
+  )*/
 };
 
 export { Formulario };
