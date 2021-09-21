@@ -8,8 +8,6 @@ import neoQ from "../json/neoQ.json";
 Survey.StylesManager.applyTheme("bootstrap");
 Survey.defaultBootstrapCss.navigationButton = "btn btn-red";
 
-var map = new Map();
-
 var surveyValueChanged = function (sender, options) {
   var el = document.getElementById(options.name);
   if (el) {

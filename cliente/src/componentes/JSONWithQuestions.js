@@ -63,7 +63,7 @@ class JSONWithQuestions {
       let nP = questions[i].tipoPregunta;
       if (nP === CHECKBOX || nP === CHECKBOX2) {
 
-        if (aux != { title: "", questions: [] }) {
+        if (aux !== { title: "", questions: [] }) {
           neoQ.pages = neoQ.pages.concat(aux);
           aux = { title: "", questions: [] };
         }
