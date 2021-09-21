@@ -1,22 +1,22 @@
 import React from "react";
 
-function Respuesta(props){
+function Respuesta(props) {
 
   console.log("respuestas: " + props.respuestasYTipos);
   const tipo = "radio";
 
-  return(
+  return (
     <form>
       {
         props.respuestasYTipos.map(respuestaYTipo =>
-        <ul >
+          <ul >
             <input type={tipo} /> {respuestaYTipo[0]}
-        </ul>
-        
+          </ul>
+
         )}
-    </form>  
-    
+    </form>
+
   )
 }
 
-export {Respuesta}
+export { Respuesta }

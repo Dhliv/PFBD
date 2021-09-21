@@ -1,7 +1,5 @@
 {
   "questionTitleLocation": "top",
-    "showQuestionNumbers": "on",
-    "pages": [
-      
-    ]
+  "showQuestionNumbers": "on",
+  "pages": []
 }
