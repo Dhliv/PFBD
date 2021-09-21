@@ -23,6 +23,7 @@ var surveyValueChanged = function (sender, options) {
  */
 function SurveyComponent() {
 
+  //console.log(neoQ);
   const survey = new Survey.Model(neoQ);
 
   survey

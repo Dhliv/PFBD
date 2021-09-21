@@ -1,16 +1,13 @@
 import neoQ from "../json/neoQ.json";
-import questions from "../json/questions.json"
+import { questions } from "../json/questions.json"
 
+var tipoPregunta = ["checkbox", "radiogroup", "radiogroup", "checkbox", "text"];
+var CHECKBOX = 3;
+var CHECKBOX2 = 2;
+var titulo = "";
 class JSONWithQuestions {
-  tipoPregunta;
-  CHECKBOX;
-  CHECKBOX2;
-  titulo;
 
   static init() {
-    this.tipoPregunta = ["checkbox", "radiogroup", "radiogroup", "checkbox", "text"];
-    this.CHECKBOX = 3;
-    this.CHECKBOX2 = 2;
     this.createJson();
   }
 

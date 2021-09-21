@@ -8,3 +8,4 @@ import './styles/styles.scss'
 
 
 JSONWithQuestions.init();
+ReactDOM.render(<SurveyComponent />, document.getElementById('root'));
