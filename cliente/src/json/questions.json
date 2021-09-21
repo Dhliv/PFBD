@@ -21,16 +21,6 @@
       "Pregunta Abierta"
     ]
   ],
-  "tipadoRespuesta": [
-    [
-      0,
-      "No Aplica"
-    ],
-    [
-      1,
-      "Number"
-    ]
-  ],
   "questions": [
     {
       "tipoPregunta": 1,
@@ -38,15 +28,21 @@
       "respuestas": [
         [
           "Hombre",
-          0
+          [
+            0
+          ]
         ],
         [
           "Mujer",
-          0
+          [
+            0
+          ]
         ],
         [
           "No Binario",
-          0
+          [
+            0
+          ]
         ]
       ]
     },
@@ -56,25 +52,27 @@
       "respuestas": [
         [
           "Años",
-          1
+          [
+            0
+          ]
         ]
       ]
     },
     {
       "tipoPregunta": 2,
-      "titulo": "Las preguntas {} me gustaría que respondiera si te gusta o no la actividad.",
+      "titulo": "Le gustan o no las siguientes actividades.",
       "preguntas": [
-        "BEBER, IR DE COPAS",
-        "IR A DISCOTECAS, BAILAR",
-        "HACER DEPORTE",
-        "ASISTIR A COMPETICIONES DEPORTIVAS",
-        "IR AL CINE",
-        "IR AL TEATRO",
-        "IR A CONCIERTOS",
-        "ESCUCHAR MÚSICA, CD, CINTAS",
-        "IR A MUSEOS, EXPOSICIONES",
-        "ASISTIR A CONFERENCIAS, COLOQUIOS",
-        "LEER LIBROS",
+        "Beber, ir de copas",
+        "Ir a discotecas, bailar",
+        "Hacer deporte",
+        "Asistir a competencias deportivas",
+        "Ir al cine",
+        "Ir al teatro",
+        "Ir a conciertos",
+        "Escuchar música, CD, cintas",
+        "Ir a museos, exposiciones",
+        "Asistir a conferencias, coloquios",
+        "Leer libros",
         "Pasear a tu mascota"
       ],
       "respuestas": [
@@ -85,28 +83,24 @@
         [
           "No",
           0
-        ],
-        [
-          "No Contesta",
-          0
         ]
       ]
     },
     {
       "tipoPregunta": 2,
-      "titulo": "Y también si la practicas o no la practicas habitualmente.",
+      "titulo": "¿Usted practica las siguientes actividades habitualmente?",
       "preguntas": [
-        "BEBER, IR DE COPAS",
-        "IR A DISCOTECAS, BAILAR",
-        "HACER DEPORTE",
-        "ASISTIR A COMPETICIONES DEPORTIVAS",
-        "IR AL CINE",
-        "IR AL TEATRO",
-        "IR A CONCIERTOS",
-        "ESCUCHAR MÚSICA, CD, CINTAS",
-        "IR A MUSEOS, EXPOSICIONES",
-        "ASISTIR A CONFERENCIAS, COLOQUIOS",
-        "LEER LIBROS",
+        "Beber, ir de copas",
+        "Ir a discotecas, bailar",
+        "Hacer deporte",
+        "Asistir a competencias deportivas",
+        "Ir al cine",
+        "Ir al teatro",
+        "Ir a conciertos",
+        "Escuchar música, CD, cintas",
+        "Ir a museos, exposiciones",
+        "Asistir a conferencias, coloquios",
+        "Leer libros",
         "Pasear a tu mascota"
       ],
       "respuestas": [
@@ -116,17 +110,13 @@
         ],
         [
           "No",
-          0
-        ],
-        [
-          "No Contesta",
           0
         ]
       ]
     },
     {
       "tipoPregunta": 1,
-      "titulo": "De lo que ves en televisión y/o internet, ¿qué te gusta más?",
+      "titulo": "De lo que ve en televisión y/o internet, ¿qué le gusta más?",
       "respuestas": [
         [
           "Películas, cine",
@@ -155,16 +145,12 @@
         [
           "Nada",
           0
-        ],
-        [
-          "Sin contestación",
-          0
         ]
       ]
     },
     {
       "tipoPregunta": 4,
-      "titulo": "¿De cuánto dinero dispones a la semana para tus gastos en las actividades de ocio que realizas?",
+      "titulo": "¿De cuánto dinero dispone a la semana para sus gastos en las actividades de ocio que realiza?",
       "respuestas": [
         [
           "$",
@@ -174,18 +160,18 @@
     },
     {
       "tipoPregunta": 0,
-      "titulo": "¿con quién sueles salir habitualmente?",
+      "titulo": "¿con quién suele salir habitualmente?",
       "respuestas": [
         [
           "Solo",
           0
         ],
         [
-          "Con tu cónyuge, pareja, novio/a",
+          "Con su cónyuge, pareja, novio/a",
           0
         ],
         [
-          "Con tus padres",
+          "Con sus padres",
           0
         ],
         [
@@ -199,24 +185,20 @@
         [
           "Con el centro escolar",
           0
-        ],
-        [
-          "No Contesta",
-          0
         ]
       ]
     },
     {
       "tipoPregunta": 2,
-      "titulo": "Vamos a hablar ahora de una serie de gastos. ¿Con qué frecuencia sueles hacer cada uno de los gastos que listan a continuación?",
+      "titulo": "Con qué frecuencia suele hacer cada uno de las actividades que se listan a continuación:",
       "preguntas": [
-        "IR DE BARES, CAFETERÍAS",
-        "IR A DISCOTECAS, SALAS DE BAILE",
-        "IR AL CINE",
-        "IR A TEATRO",
-        "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
-        "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
-        "USAR INSTALACIONES DEPORTIVAS",
+        "Ir de bares, cafeterías",
+        "Ir a discotecas, salas de baile",
+        "Ir al cine",
+        "Ir a teatro",
+        "Asistir a espectáculos musicales, conciertos",
+        "Asistir a espectacúlos deportivos",
+        "Usar instalaciones deportivas",
         "Comprar libros."
       ],
       "respuestas": [
@@ -252,15 +234,15 @@
     },
     {
       "tipoPregunta": 4,
-      "titulo": "¿Y podrías decirme, aproximadamente, cuánto dinero te gastas al mes en esa actividad de ocio?",
+      "titulo": "¿Podría decirme, aproximadamente, cuánto dinero gasta al mes en esas actividades de ocio?",
       "preguntas": [
-        "IR DE BARES, CAFETERÍAS",
-        "IR A DISCOTECAS, SALAS DE BAILE",
-        "IR AL CINE",
-        "IR A TEATRO",
-        "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
-        "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
-        "USAR INSTALACIONES DEPORTIVAS",
+        "Ir de bares, cafeterías",
+        "Ir a discotecas, salas de baile",
+        "Ir al cine",
+        "Ir a teatro",
+        "Asistir a espectáculos musicales, conciertos",
+        "Asistir a espectáculos deportivos",
+        "Usar instalaciones deportivas",
         "Comprar libros."
       ],
       "respuestas": [
@@ -272,15 +254,15 @@
     },
     {
       "tipoPregunta": 2,
-      "titulo": "Vamos a hablar ahora de una serie de cosas que puedes comprar para tu uso personal. ¿Con qué frecuencia sueles….?",
+      "titulo": "¿Con qué frecuencia suele…?",
       "preguntas": [
-        "IR DE BARES, CAFETERÍAS",
-        "IR A DISCOTECAS, SALAS DE BAILE",
-        "IR AL CINE",
-        "IR A TEATRO",
-        "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
-        "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
-        "USAR INSTALACIONES DEPORTIVAS",
+        "Ir de bares, cafeterías",
+        "Ir a discotecas, salas de baile",
+        "Ir al cine",
+        "Ir a teatro",
+        "Asistir a espectáculos musicales, conciertos",
+        "Asistir a espectáculos deportivos",
+        "Usar instalaciones deportivas",
         "Comprar libros."
       ],
       "respuestas": [
@@ -316,15 +298,15 @@
     },
     {
       "tipoPregunta": 4,
-      "titulo": "¿Y cuánto calcula que te gastas al mes en esa compra?",
+      "titulo": "¿Y cuánto calcula que se gasta al mes en esas actividades?",
       "preguntas": [
-        "IR DE BARES, CAFETERÍAS",
-        "IR A DISCOTECAS, SALAS DE BAILE",
-        "IR AL CINE",
-        "IR A TEATRO",
-        "ASISTIR A ESPECTÁCULOS MUSICALES, CONCIERTOS",
-        "ASISTIR A ESPECTÁCULOS DEPORTIVOS",
-        "USAR INSTALACIONES DEPORTIVAS",
+        "Ir de bares, cafeterías",
+        "Ir a discotecas, salas de baile",
+        "Ir al cine",
+        "Ir a teatro",
+        "Asistir a espectáculos musicales, conciertos",
+        "Asistir a espectáculos deportivos",
+        "Usar instalaciones deportivas",
         "Comprar libros."
       ],
       "respuestas": [
@@ -336,7 +318,7 @@
     },
     {
       "tipoPregunta": 1,
-      "titulo": "¿Dónde vive habitualmente la mayor parte del año?",
+      "titulo": "¿Dónde vive habitualmente durante el trascurso del año?",
       "respuestas": [
         [
           "En el domicilio de la familia de origen (con los padres o con alguno de ellos)",
@@ -349,16 +331,12 @@
         [
           "Compartiendo vivienda con otras personas (piso compartido, residencia, etc.)",
           0
-        ],
-        [
-          "No contesta",
-          0
         ]
       ]
     },
     {
       "tipoPregunta": 1,
-      "titulo": "En la actualidad, ¿en cuál de las siguientes situaciones te encuentras?",
+      "titulo": "En la actualidad, ¿en cuál de las siguientes situaciones se encuentra?",
       "respuestas": [
         [
           "Sólo estudia",
@@ -390,10 +368,6 @@
         ],
         [
           "No puede trabajar (invalidez, incapacidad)",
-          0
-        ],
-        [
-          "No contesta",
           0
         ]
       ]
@@ -436,10 +410,6 @@
         ],
         [
           "No sabe",
-          0
-        ],
-        [
-          "No contesta",
           0
         ]
       ]
