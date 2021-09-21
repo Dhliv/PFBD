@@ -5,6 +5,9 @@ var tipoPregunta = ["checkbox", "radiogroup", "radiogroup", "checkbox", "text"];
 var CHECKBOX = 3;
 var CHECKBOX2 = 2;
 var titulo = "";
+var categorias = new Map();
+var puntaje = new Map();
+
 class JSONWithQuestions {
 
   static init() {
@@ -21,14 +24,27 @@ class JSONWithQuestions {
   static addQuestion(posTitulo, posPregunta) {
     titulo = questions[posTitulo].titulo; // Almacena el título de la pregunta.
     const pregunta = posPregunta !== -1 ? questions[posTitulo].preguntas[posPregunta] : ""; // Almacena el texto de la pregunta.
-    const nombre = posPregunta !== -1 ? titulo + " " + pregunta : titulo; // Almacena el nombre único de la pregunta.
+    const nombre = titulo + (posPregunta !== -1 ? " " + pregunta : ""); // Almacena el nombre único de la pregunta.
     const tipo = tipoPregunta[questions[posTitulo].tipoPregunta]; //Almacena el tipo de pregunta que corresponde(checkbox,radiogroup,etc)
     const nCol = questions[posTitulo].respuestas.length; // Almacena el número de respuestas que existen para la pregunta.
     let choices = []; // Almacena las opciones de respuesta a la pregunta.
 
     // Se agregan las opciones de respuesta a choices.
     for (let i = 0; i < nCol; i++) {
-      choices.push(questions[posTitulo].respuestas[i][0]);
+      let ans = questions[posTitulo].respuestas[i][0];
+      choices.push(ans);
+      //Ingresamos en el mapa el puntaje que corresponde a la respuesta 'ans'.
+      puntaje.set(ans, questions[posTitulo].respuestas[i][1]);
+    }
+
+    // Se agrega al mapa 'categorias' las categorias que corresponden a la pregunta/respuesta.
+    if (posPregunta !== -1) {
+      categorias.set(nombre, questions[posTitulo].categorias[posPregunta]);
+    } else {
+      for (let i = 0; i < nCol; i++) {
+        // Se concatena el nombre y la respuesta para identificar categorias en diferentes preguntas.
+        categorias.set(nombre + " " + questions[posTitulo].respuestas[i][0], questions[posTitulo].categorias[i]);
+      }
     }
 
     // Se crea un json con el formato adecuado.
@@ -82,4 +98,4 @@ class JSONWithQuestions {
   }
 }
 
-export { JSONWithQuestions }
+export { JSONWithQuestions, categorias, puntaje }

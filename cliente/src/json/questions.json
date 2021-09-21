@@ -25,6 +25,11 @@
     {
       "tipoPregunta": 1,
       "titulo": "Indique su género",
+      "categorias": [
+        [
+          0
+        ]
+      ],
       "respuestas": [
         [
           "Hombre",
@@ -49,6 +54,11 @@
     {
       "tipoPregunta": 4,
       "titulo": "Qué edad tiene?",
+      "categorias": [
+        [
+          0
+        ]
+      ],
       "respuestas": [
         [
           "Años",
@@ -74,6 +84,44 @@
         "Asistir a conferencias, coloquios",
         "Leer libros",
         "Pasear a tu mascota"
+      ],
+      "categorias": [
+        [
+          3
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          8
+        ],
+        [
+          7
+        ],
+        [
+          2
+        ],
+        [
+          2
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          9
+        ],
+        [
+          6
+        ]
       ],
       "respuestas": [
         [
@@ -103,6 +151,44 @@
         "Leer libros",
         "Pasear a tu mascota"
       ],
+      "categorias": [
+        [
+          3
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          8
+        ],
+        [
+          7
+        ],
+        [
+          2
+        ],
+        [
+          2
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          9
+        ],
+        [
+          6
+        ]
+      ],
       "respuestas": [
         [
           "Si",
@@ -117,6 +203,26 @@
     {
       "tipoPregunta": 1,
       "titulo": "De lo que ve en televisión y/o internet, ¿qué le gusta más?",
+      "categorias": [
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          5
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          4
+        ]
+      ],
       "respuestas": [
         [
           "Películas, cine",
@@ -151,16 +257,69 @@
     {
       "tipoPregunta": 4,
       "titulo": "¿De cuánto dinero dispone a la semana para sus gastos en las actividades de ocio que realiza?",
+      "categorias": [
+        -1
+      ],
       "respuestas": [
         [
           "$",
-          1
+          0
         ]
       ]
     },
     {
-      "tipoPregunta": 0,
+      "tipoPregunta": 1,
       "titulo": "¿con quién suele salir habitualmente?",
+      "categorias": [
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          5,
+          7,
+          8,
+          9
+        ]
+      ],
       "respuestas": [
         [
           "Solo",
@@ -200,6 +359,32 @@
         "Asistir a espectacúlos deportivos",
         "Usar instalaciones deportivas",
         "Comprar libros."
+      ],
+      "categorias": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          8
+        ],
+        [
+          7
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          9
+        ]
       ],
       "respuestas": [
         [
@@ -245,10 +430,36 @@
         "Usar instalaciones deportivas",
         "Comprar libros."
       ],
+      "categorias": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          8
+        ],
+        [
+          7
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          9
+        ]
+      ],
       "respuestas": [
         [
           "$",
-          1
+          0
         ]
       ]
     },
@@ -264,6 +475,32 @@
         "Asistir a espectáculos deportivos",
         "Usar instalaciones deportivas",
         "Comprar libros."
+      ],
+      "categorias": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          8
+        ],
+        [
+          7
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          9
+        ]
       ],
       "respuestas": [
         [
@@ -299,6 +536,29 @@
     {
       "tipoPregunta": 4,
       "titulo": "¿Y cuánto calcula que se gasta al mes en esas actividades?",
+      "categorias": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          8
+        ],
+        [
+          7
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ],
+        [
+          9
+        ]
+      ],
       "preguntas": [
         "Ir de bares, cafeterías",
         "Ir a discotecas, salas de baile",
@@ -312,13 +572,18 @@
       "respuestas": [
         [
           "$",
-          1
+          0
         ]
       ]
     },
     {
       "tipoPregunta": 1,
       "titulo": "¿Dónde vive habitualmente durante el trascurso del año?",
+      "categorias": [
+        [
+          0
+        ]
+      ],
       "respuestas": [
         [
           "En el domicilio de la familia de origen (con los padres o con alguno de ellos)",
@@ -337,6 +602,11 @@
     {
       "tipoPregunta": 1,
       "titulo": "En la actualidad, ¿en cuál de las siguientes situaciones se encuentra?",
+      "categorias": [
+        [
+          0
+        ]
+      ],
       "respuestas": [
         [
           "Sólo estudia",
@@ -375,6 +645,11 @@
     {
       "tipoPregunta": 1,
       "titulo": "¿Cuáles son los estudios de más alto nivel oficial que has cursado hasta ahora?",
+      "categorias": [
+        [
+          0
+        ]
+      ],
       "respuestas": [
         [
           "Universitarios Superiores",

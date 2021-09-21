@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import * as Survey from "survey-react";
 
@@ -15,6 +15,10 @@ var surveyValueChanged = function (sender, options) {
   }
 };
 
+function parserUserRespToBDFormat() {
+
+}
+
 /**
  * Crea la encuesta y retorna el componente jsx grafico.
  *  @return componente que almacena la encuesta.
@@ -27,6 +31,7 @@ function SurveyComponent() {
   survey
     .onComplete
     .add(function (sender) {
+
       console.log(JSON.stringify(sender.data, null, 2));
     });
 
