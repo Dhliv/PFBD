@@ -18,7 +18,11 @@
     ],
     [
       4,
-      "Pregunta Abierta"
+      "Pregunta Abierta sin subpreguntas"
+    ],
+    [
+      5,
+      "Pregunta Abierta con subpreguntas"
     ]
   ],
   "questions": [
@@ -26,6 +30,12 @@
       "tipoPregunta": 1,
       "titulo": "Indique su género",
       "categorias": [
+        [
+          0
+        ],
+        [
+          0
+        ],
         [
           0
         ]
@@ -56,7 +66,7 @@
       "titulo": "Qué edad tiene?",
       "categorias": [
         [
-          0
+          -1
         ]
       ],
       "respuestas": [
@@ -258,7 +268,9 @@
       "tipoPregunta": 4,
       "titulo": "¿De cuánto dinero dispone a la semana para sus gastos en las actividades de ocio que realiza?",
       "categorias": [
-        -1
+        [
+          -1
+        ]
       ],
       "respuestas": [
         [
@@ -418,7 +430,7 @@
       ]
     },
     {
-      "tipoPregunta": 4,
+      "tipoPregunta": 5,
       "titulo": "¿Podría decirme, aproximadamente, cuánto dinero gasta al mes en esas actividades de ocio?",
       "preguntas": [
         "Ir de bares, cafeterías",
@@ -582,6 +594,12 @@
       "categorias": [
         [
           0
+        ],
+        [
+          0
+        ],
+        [
+          0
         ]
       ],
       "respuestas": [
@@ -603,6 +621,27 @@
       "tipoPregunta": 1,
       "titulo": "En la actualidad, ¿en cuál de las siguientes situaciones se encuentra?",
       "categorias": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
         [
           0
         ]
@@ -646,6 +685,30 @@
       "tipoPregunta": 1,
       "titulo": "¿Cuáles son los estudios de más alto nivel oficial que has cursado hasta ahora?",
       "categorias": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
         [
           0
         ]
