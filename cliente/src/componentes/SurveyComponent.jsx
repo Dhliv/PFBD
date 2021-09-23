@@ -26,9 +26,7 @@ function SurveyComponent() {
   survey
     .onComplete
     .add(function (sender) {
-      let ans = sender.data;
-      //checkAllQuestions(sender.data);
-      console.log(ans.valueOf("Indique su género"), typeof ans);
+      checkAllQuestions(sender.data);
     });
 
   return (
