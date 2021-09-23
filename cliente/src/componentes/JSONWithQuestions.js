@@ -1,9 +1,10 @@
 import neoQ from "../json/neoQ.json";
 import { questions } from "../json/questions.json"
 
-var tipoPregunta = ["checkbox", "radiogroup", "radiogroup", "checkbox", "text"];
+var tipoPregunta = ["checkbox", "radiogroup", "radiogroup", "checkbox", "text", "text"];
 var CHECKBOX = 3;
 var CHECKBOX2 = 2;
+var ABIERTAMULTIPLE = 5;
 var titulo = "";
 var categorias = new Map();
 var puntaje = new Map();
@@ -40,11 +41,13 @@ class JSONWithQuestions {
     // Se agrega al mapa 'categorias' las categorias que corresponden a la pregunta/respuesta.
     if (posPregunta !== -1) {
       categorias.set(nombre, questions[posTitulo].categorias[posPregunta]);
-    } else {
+    } else if (questions[posTitulo].tipoPregunta != 4) {
       for (let i = 0; i < nCol; i++) {
         // Se concatena el nombre y la respuesta para identificar categorias en diferentes preguntas.
         categorias.set(nombre + " " + questions[posTitulo].respuestas[i][0], questions[posTitulo].categorias[i]);
       }
+    } else {
+      categorias.set(nombre, questions[posTitulo].categorias[0]);
     }
 
     // Se crea un json con el formato adecuado.
@@ -77,7 +80,7 @@ class JSONWithQuestions {
 
     for (let i = 0; i < questions.length; i++) {
       let nP = questions[i].tipoPregunta;
-      if (nP === CHECKBOX || nP === CHECKBOX2) {
+      if (nP === CHECKBOX || nP === CHECKBOX2 || nP === ABIERTAMULTIPLE) {
 
         if (aux !== { title: "", questions: [] }) {
           neoQ.pages = neoQ.pages.concat(aux);
