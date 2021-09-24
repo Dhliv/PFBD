@@ -17,6 +17,7 @@ class Registroinfo {
     const idRespuesta = async () => {
       const res = await axios.post('/basedatos/getNewIdRespuesta', {});
       id = res.data.idRespuesta;
+      console.log(id);
     }
 
     idRespuesta();
