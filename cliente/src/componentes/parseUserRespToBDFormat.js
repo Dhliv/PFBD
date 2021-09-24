@@ -59,7 +59,9 @@ function checkAnswers(answers) {
     parseAnswerForBD();
   }
 
-  console.log(insertIntoTable.toInsert);
+  setTimeout(function () {
+    console.log(insertIntoTable.toInsert);
+  }, 2000);
 }
 
 export { checkAnswers, saveParsedAnswer };
