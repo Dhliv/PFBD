@@ -7,6 +7,17 @@ var score;
 var idUsuario;
 var idRespuesta;
 
+function saveParsedAnswer(table, data) {
+  let aux = {
+    table: "",
+    info: []
+  }
+
+  aux.table = table;
+  aux.info = data;
+  insertIntoTable.toInsert = insertIntoTable.toInsert.concat(aux);
+}
+
 function parseAnswerForBD() {
   let template = {
     table: "",
@@ -15,22 +26,17 @@ function parseAnswerForBD() {
 
   let aux;
   let category;
+  let table;
 
   for (let i = 0; i < categories.length; i++) {
     category = categories[i];
-    aux = JSON.parse(JSON.stringify(template, null, 2)); // Deep copy of template.
+    //aux = JSON.parse(JSON.stringify(template, null, 2)); // Deep copy of template.
     if (category > 0 && category <= 9) { // La respuesta va en la tabla de respuestas.
-      idRespuesta = Registroinfo.idRespuesta();
-
-      aux.table = "resultado_preguntas";
-      aux.info.push(idRespuesta);
-      aux.info.push(category);
-      aux.info.push(score);
-
+      table = "resultado_preguntas";
+      Registroinfo.idRespuesta(table, category, score);
     } else { // La respuesta va en otra parte.
 
     }
-    insertIntoTable.toInsert = insertIntoTable.toInsert.concat(aux);
   }
 }
 
@@ -56,4 +62,4 @@ function checkAnswers(answers) {
   console.log(insertIntoTable.toInsert);
 }
 
-export { checkAnswers };
+export { checkAnswers, saveParsedAnswer };

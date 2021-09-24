@@ -1,4 +1,5 @@
-import axios from 'axios'
+import axios from 'axios';
+import { saveParsedAnswer } from "./componentes/parseUserRespToBDFormat";
 
 class Registroinfo {
 
@@ -12,17 +13,15 @@ class Registroinfo {
   /**
    * Obtiene el siguiente valor de idRespuesta de la BD y lo almacena.
    */
-  static idRespuesta() {
+  static idRespuesta(table, category, score) {
     const idR = async () => {
       const res = await axios.post('/basedatos/getNewIdRespuesta', {});
       let id = res.data.idRespuesta;
-      return id;
+      let data = [id, category, score];
+      saveParsedAnswer(table, data);
     }
 
-    let id = Promise.resolve(idR()).then((value) => {
-      return value;
-    })
-    return id;
+    idR();
   }
 
   /**
