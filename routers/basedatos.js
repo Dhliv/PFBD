@@ -32,7 +32,7 @@ router.post('/insertRespuesta', async (req, res) => {
  * Obtiene el IdRespuesta siguiente.
  */
 router.post('/getNewIdRespuesta', async (req, res) => {
-  const idRespuesta = await client.query(
+  const idRespuesta = client.query(
     `select nextval('idRespuesta');`
   );
   res.send({ "idRespuesta": idRespuesta.rows[0].nextval });

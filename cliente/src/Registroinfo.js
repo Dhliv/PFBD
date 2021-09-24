@@ -14,13 +14,9 @@ class Registroinfo {
    */
   static idRespuesta() {
     let id;
-    const idRespuesta = async () => {
-      const res = await axios.post('/basedatos/getNewIdRespuesta', {});
-      id = res.data.idRespuesta;
-      console.log(id);
-    }
-
-    idRespuesta();
+    const res = axios.post('/basedatos/getNewIdRespuesta', {});
+    id = res.data.idRespuesta;
+    console.log(id);
     return id;
   }
 
