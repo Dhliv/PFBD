@@ -20,7 +20,7 @@ class Registroinfo {
       return id;
     }
 
-    return await idRespuesta();
+    return idRespuesta;
   }
 
   /**
