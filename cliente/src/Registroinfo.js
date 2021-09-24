@@ -13,11 +13,14 @@ class Registroinfo {
    * Obtiene el siguiente valor de idRespuesta de la BD y lo almacena.
    */
   static idRespuesta() {
-    let id;
-    const res = axios.post('/basedatos/getNewIdRespuesta', {});
-    id = res.data.idRespuesta;
-    console.log(id);
-    return id;
+    const idRespuesta = async () => {
+      const res = await axios.post('/basedatos/getNewIdRespuesta', {});
+      let id = res.data.idRespuesta;
+      console.log(id);
+      return id;
+    }
+
+    return await idRespuesta();
   }
 
   /**
