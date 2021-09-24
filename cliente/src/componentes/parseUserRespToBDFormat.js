@@ -18,7 +18,11 @@ function saveParsedAnswer(table, data) {
   insertIntoTable.toInsert = insertIntoTable.toInsert.concat(aux);
 }
 
-function parseAnswerForBD() {
+function functionInutil() {
+  console.log();
+}
+
+async function parseAnswerForBD(f) {
   let template = {
     table: "",
     info: []
@@ -38,6 +42,8 @@ function parseAnswerForBD() {
 
     }
   }
+
+  f();
 }
 
 /**
@@ -56,12 +62,10 @@ function checkAnswers(answers) {
 
     if (categorias.get(question) !== undefined) categories = categorias.get(question);
     else categories = categorias.get(question + " " + answer);
-    parseAnswerForBD();
+    parseAnswerForBD(functionInutil());
   }
 
-  setTimeout(function () {
-    console.log(insertIntoTable.toInsert);
-  }, 2000);
+  console.log(insertIntoTable.toInsert);
 }
 
 export { checkAnswers, saveParsedAnswer };
