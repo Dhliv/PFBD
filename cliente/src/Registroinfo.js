@@ -16,11 +16,13 @@ class Registroinfo {
     const idR = async () => {
       const res = await axios.post('/basedatos/getNewIdRespuesta', {});
       let id = res.data.idRespuesta;
-      console.log(id);
       return id;
     }
 
-    return idR();
+    let id = Promise.resolve(idR()).then((value) => {
+      return value;
+    })
+    return id;
   }
 
   /**
