@@ -29,7 +29,7 @@ class JSONWithQuestions {
     const nombre = titulo + (posPregunta !== -1 ? " " + pregunta : ""); // Almacena el nombre único de la pregunta.
     const tipo = tipoPregunta[questions[posTitulo].tipoPregunta]; //Almacena el tipo de pregunta que corresponde(checkbox,radiogroup,etc)
     const nCol = questions[posTitulo].respuestas.length; // Almacena el número de respuestas que existen para la pregunta.
-    const presupuesto = questions[posTitulo].presupuesto === 1 ? true : false;
+    const presupuesto = questions[posTitulo].presupuesto === 1 ? true : false; // Almacena si la pregunta está relacionada al presupuesto.
     let choices = []; // Almacena las opciones de respuesta a la pregunta.
 
     // Se agregan las opciones de respuesta a choices.
@@ -52,8 +52,11 @@ class JSONWithQuestions {
         if (presupuesto)
           categoriasPresupuesto.set(nombre + " " + questions[posTitulo].respuestas[i][0], questions[posTitulo].pertenecen[i]);
       }
-    } else
+    } else {
       categorias.set(nombre, questions[posTitulo].categorias[0]);
+      if (presupuesto)
+        categoriasPresupuesto.set(nombre, questions[posTitulo].pertenecen[0]);
+    }
 
     // Se crea un json con el formato adecuado.
     let question = [
