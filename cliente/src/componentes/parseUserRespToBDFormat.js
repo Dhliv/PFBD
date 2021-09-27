@@ -40,6 +40,10 @@ function parseAnswerForBD() {
   }
 }
 
+
+resultado_preguntas:
+id, categoria, score, id_usuario
+
 /**
  * Obtiene todas las respuestas a la survey y les aplica el formato para inserción en la BD.
  * @param {JSON} answers respuestas de la survey.
