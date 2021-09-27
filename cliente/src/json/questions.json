@@ -660,42 +660,35 @@
         ],
         [
           0
-        ],
-        [
-          0
         ]
       ],
       "respuestas": [
         [
-          "Sólo estudia",
+          "Estudiante",
           0
         ],
         [
-          "Trabaja y estudia",
+          "Empleado y Estudiante",
           0
         ],
         [
-          "Sólo trabaja",
+          "Empleado",
           0
         ],
         [
-          "Está parado, pero ha trabajado antes",
+          "Desempleado",
           0
         ],
         [
-          "Busca su primer empleo",
+          "Voluntario",
           0
         ],
         [
-          "Se dedica a las tareas del hogar",
+          "Inválido",
           0
         ],
         [
-          "Realiza labores de voluntariado social",
-          0
-        ],
-        [
-          "No puede trabajar (invalidez, incapacidad)",
+          "No Contesta",
           0
         ]
       ]
@@ -728,20 +721,13 @@
         ],
         [
           0
-        ],
-        [
-          0
         ]
       ],
       "respuestas": [
         [
-          "Universitarios Superiores",
+          "Universitario",
           0
-        ],
-        [
-          "Universitarios Medios",
-          0
-        ],
+        ]
         [
           "Tecnólogo",
           0
@@ -759,7 +745,7 @@
           0
         ],
         [
-          "Primaria Completa",
+          "Primaria",
           0
         ],
         [
@@ -767,7 +753,7 @@
           0
         ],
         [
-          "No sabe",
+          "No Contesta",
           0
         ]
       ]
