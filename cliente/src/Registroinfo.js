@@ -1,13 +1,25 @@
 import axios from 'axios';
-import { saveParsedAnswer } from "./componentes/parseUserRespToBDFormat";
+import { checkAnswers } from "./componentes/parseUserRespToBDFormat";
+import insertIntoTable from "./json/insertIntoTable.json";
 
 class Registroinfo {
 
-  static inserRespuesta() {
-    const insertRespuesta = async () => {
-      const res = await axios.post('/basedatos/insertRespuesta', { "usuarioID": 1, "idRespuesta": -2147483645 });
-      console.log(res.data)
+  static getAnswersAndUploadThem(answers) {
+    const doAll = async () => {
+      checkAnswers(answers);
+      console.log(insertIntoTable.toInsert);
+      const userPos = insertIntoTable.toInsert.length - 1;
+      const genero = (await axios.post('basedatos/getIdGenero', { "genero": insertIntoTable.toInsert[userPos].info[0] })).data.idGenero;
+      const edad = insertIntoTable.toInsert[userPos].info[1];
+      const gastoSemanal = insertIntoTable.toInsert[userPos].info[2];
+      const conQuienSale = (await axios.post('basedatos/getIdConQuienSale', { "conQuienSale": insertIntoTable.toInsert[userPos].info[3] })).data.idconQuienSale;
+      const ocupacion = await (await axios.post('basedatos/getIdOcupacion', { "ocupacion": insertIntoTable.toInsert[userPos].info[4] })).data.idOcupacion;
+      const estudio = await (await axios.post('basedatos/getIdEstudio', { "estudio": insertIntoTable.toInsert[userPos].info[5] })).data.idEstudio;
+      console.log(genero, edad, gastoSemanal, conQuienSale, ocupacion, estudio);
+      //const idUsuario = await axios.post('basedatos/insertUsuario', { "genero": user[0], "edad": user[0], "gastoSemanal": user[0], "conQuienSale": user[0], "ocupacion": user[0], "estudio": user[0] });
     }
+
+    doAll();
   }
 
   /**
@@ -15,10 +27,10 @@ class Registroinfo {
    */
   static idRespuesta(table, category, score) {
     const idR = async () => {
-      const res = await axios.post('/basedatos/getNewIdRespuesta', {});
-      let id = res.data.idRespuesta;
-      let data = [id, category, score];
-      saveParsedAnswer(table, data);
+      // const res = await axios.post('/basedatos/getNewIdRespuesta', {});
+      // let id = res.data.idRespuesta;
+      // let data = [id, category, score];
+      // saveParsedAnswer(table, data);
     }
 
     idR();
@@ -36,25 +48,6 @@ class Registroinfo {
 
     idUsuario();
     return id;
-  }
-
-  static insertUsuario(idUsuario, genero, edad, idOcupacion, idEstudio) {
-    let res;
-    const insertUsuario = async () => {
-      //const res = await axios.post('/basedatos/insertUsuario', { "idUsuario": idUsuario, "genero": genero, "edad": edad, "id_ocupacion": idOcupacion, "id_estudio": idEstudio });
-      //console.log(res.data)
-      res = idEstudio + idUsuario;
-    }
-    insertUsuario();
-    return res;
-  }
-
-  static insertResultadoPreguntas(idRespuesta, idEvento, score) {
-    const insertResultadoPreguntas = async () => {
-      const res = await axios.post('/basedatos/insertResultadoPreguntas', { "idRespuesta": idRespuesta, "idEvento": idEvento, "score": score });
-      console.log(res.data)
-    }
-    insertResultadoPreguntas();
   }
 
   static getScoresByEvent() {

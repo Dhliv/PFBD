@@ -2,7 +2,7 @@ import React from "react";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import neoQ from "../json/neoQ.json";
-import { checkAnswers } from "./parseUserRespToBDFormat";
+import { Registroinfo } from "../Registroinfo";
 
 Survey.StylesManager.applyTheme("bootstrap");
 Survey.defaultBootstrapCss.navigationButton = "btn btn-red";
@@ -26,7 +26,7 @@ function SurveyComponent() {
   survey
     .onComplete
     .add(function (sender) {
-      checkAnswers(sender.data);
+      Registroinfo.getAnswersAndUploadThem(sender.data);
     });
 
   return (
