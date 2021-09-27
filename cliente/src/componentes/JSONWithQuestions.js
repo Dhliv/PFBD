@@ -8,6 +8,7 @@ var ABIERTAMULTIPLE = 5;
 var titulo = "";
 var categorias = new Map();
 var puntaje = new Map();
+var categoriasPresupuesto = new Map();
 
 class JSONWithQuestions {
 
@@ -28,6 +29,7 @@ class JSONWithQuestions {
     const nombre = titulo + (posPregunta !== -1 ? " " + pregunta : ""); // Almacena el nombre único de la pregunta.
     const tipo = tipoPregunta[questions[posTitulo].tipoPregunta]; //Almacena el tipo de pregunta que corresponde(checkbox,radiogroup,etc)
     const nCol = questions[posTitulo].respuestas.length; // Almacena el número de respuestas que existen para la pregunta.
+    const presupuesto = questions[posTitulo].presupuesto === 1 ? true : false;
     let choices = []; // Almacena las opciones de respuesta a la pregunta.
 
     // Se agregan las opciones de respuesta a choices.
@@ -41,14 +43,17 @@ class JSONWithQuestions {
     // Se agrega al mapa 'categorias' las categorias que corresponden a la pregunta/respuesta.
     if (posPregunta !== -1) {
       categorias.set(nombre, questions[posTitulo].categorias[posPregunta]);
+      if (presupuesto)
+        categoriasPresupuesto.set(nombre, questions[posTitulo].pertenecen[posPregunta]);
     } else if (questions[posTitulo].tipoPregunta != 4) {
       for (let i = 0; i < nCol; i++) {
         // Se concatena el nombre y la respuesta para identificar categorias en diferentes preguntas.
         categorias.set(nombre + " " + questions[posTitulo].respuestas[i][0], questions[posTitulo].categorias[i]);
+        if (presupuesto)
+          categoriasPresupuesto.set(nombre + " " + questions[posTitulo].respuestas[i][0], questions[posTitulo].pertenecen[i]);
       }
-    } else {
+    } else
       categorias.set(nombre, questions[posTitulo].categorias[0]);
-    }
 
     // Se crea un json con el formato adecuado.
     let question = [
@@ -56,9 +61,8 @@ class JSONWithQuestions {
         type: tipo,
         name: nombre,
         title: posPregunta !== -1 ? pregunta : titulo,
-        isRequired: false,
         inputType: "number",
-        isRequired: true,
+        //isRequired: true,
         hasNone: false,
         colCount: Math.max(1, Math.floor(nCol / 2)),
         choices: choices
@@ -73,19 +77,19 @@ class JSONWithQuestions {
    */
   static createJson() {
 
-    var aux = {
+    var template = {
       title: "",
       questions: []
     };
-
+    var aux = JSON.parse(JSON.stringify(template, null, 2)); // Deep copy
 
     for (let i = 0; i < questions.length; i++) {
       let nP = questions[i].tipoPregunta;
       if (nP === CHECKBOX || nP === CHECKBOX2 || nP === ABIERTAMULTIPLE) {
 
-        if (aux !== { title: "", questions: [] }) {
+        if (aux !== template) {
           neoQ.pages = neoQ.pages.concat(aux);
-          aux = { title: "", questions: [] };
+          aux = JSON.parse(JSON.stringify(template, null, 2)); // Deep copy.
         }
 
         for (let j = 0; j < questions[i].preguntas.length; j++) {
@@ -94,12 +98,16 @@ class JSONWithQuestions {
         aux.title = titulo;
         neoQ.pages = neoQ.pages.concat(aux);
 
-        aux = { title: "", questions: [] };
+        aux = JSON.parse(JSON.stringify(template, null, 2)); // Deep copy.
       } else {
         aux.questions = aux.questions.concat(this.addQuestion(i, -1));
       }
     }
+
+    if (aux !== template) { // Se agregan las preguntas finales.
+      neoQ.pages = neoQ.pages.concat(aux);
+    }
   }
 }
 
-export { JSONWithQuestions, categorias, puntaje }
+export { JSONWithQuestions, categorias, puntaje, categoriasPresupuesto }
