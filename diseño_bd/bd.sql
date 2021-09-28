@@ -1,3 +1,11 @@
+select * from respuestas;
+select * from usuarios;
+select * from presupuestos;
+select * from estudios;
+select * from generos;
+select * from ocupaciones;
+select * from con_quien_sale_habitualmente;
+    
 DROP TABLE IF EXISTS usuarios CASCADE;
 DROP TABLE IF EXISTS respuestas CASCADE;
 DROP TABLE IF EXISTS eventos CASCADE;
@@ -30,7 +38,7 @@ CREATE TABLE usuarios
     FOREIGN KEY(id_estudio) REFERENCES estudios,
     FOREIGN KEY(id_ocupacion) REFERENCES ocupaciones,
     FOREIGN KEY(id_con_quien_sale) REFERENCES con_quien_sale_habitualmente);
-	
+    
 CREATE TABLE presupuestos
 (id_usuario int, id_evento int, presupuesto int,
     FOREIGN KEY(id_usuario) REFERENCES usuarios,
@@ -39,7 +47,7 @@ CREATE TABLE presupuestos
 CREATE TABLE respuestas
 (id_respuesta SERIAL PRIMARY KEY, id_usuario int, id_evento int, puntaje int,
     FOREIGN KEY(id_usuario) REFERENCES usuarios,
-	FOREIGN KEY(id_evento) REFERENCES eventos);
+    FOREIGN KEY(id_evento) REFERENCES eventos);
 
 --Insercion de los eventos
 INSERT INTO eventos(nombre_evento) values('Evento Deportivo');
@@ -67,7 +75,7 @@ INSERT INTO ocupaciones(nombre_ocupacion) values('Inválido');
 INSERT INTO ocupaciones(nombre_ocupacion) values('No Contesta');
 
 --Insercion de los estudios
-INSERT INTO estudios(nombre_estudio) values('Primaria incompleta');
+INSERT INTO estudios(nombre_estudio) values('Primaria Incompleta');
 INSERT INTO estudios(nombre_estudio) values('Primaria');
 INSERT INTO estudios(nombre_estudio) values('Bachiller');
 INSERT INTO estudios(nombre_estudio) values('Técnico');
@@ -77,7 +85,7 @@ INSERT INTO estudios(nombre_estudio) values('No Contesta');
 
 --Insercion tabla con_quien_sale_habitualmente
 INSERT INTO con_quien_sale_habitualmente(persona_con_quien_sale) VALUES('Solo');
-INSERT INTO con_quien_sale_habitualmente(persona_con_quien_sale) VALUES('Con su cónyuge, pareja, novia/a');
+INSERT INTO con_quien_sale_habitualmente(persona_con_quien_sale) VALUES('Con su cónyuge, pareja, novio/a');
 INSERT INTO con_quien_sale_habitualmente(persona_con_quien_sale) VALUES('Con sus padres');
 INSERT INTO con_quien_sale_habitualmente(persona_con_quien_sale) VALUES('Con familiares con los que no vive habitualmente');
 INSERT INTO con_quien_sale_habitualmente(persona_con_quien_sale) VALUES('Con un grupo de amigos');
