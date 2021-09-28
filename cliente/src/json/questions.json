@@ -1,4 +1,5 @@
 {
+  "somethingExtraJustToSave": "asldkjasdkjasd",
   "tipadoPregunta": [
     [
       2,
@@ -40,7 +41,8 @@
     ],
     [
       -1,
-      "NAA (No Aplica Aun)"
+      "NAA (No Aplica Aun)",
+      "deberiamos revisar esto luego"
     ]
   ],
   "questions": [
@@ -157,7 +159,7 @@
       "respuestas": [
         [
           "Si",
-          0
+          1
         ],
         [
           "No",
@@ -224,7 +226,7 @@
       "respuestas": [
         [
           "Si",
-          0
+          1
         ],
         [
           "No",
@@ -259,27 +261,27 @@
       "respuestas": [
         [
           "Películas, cine",
-          0
+          1
         ],
         [
           "Formativos, educativos, culturales",
-          0
+          1
         ],
         [
           "Informativos, de noticias, de actualidad",
-          0
+          1
         ],
         [
           "Deportes",
-          0
+          1
         ],
         [
           "Musicales",
-          0
+          1
         ],
         [
           "De dibujos; infantiles; juveniles",
-          0
+          1
         ],
         [
           "Nada",
@@ -366,27 +368,27 @@
       "respuestas": [
         [
           "Solo",
-          0
+          1
         ],
         [
           "Con su cónyuge, pareja, novio/a",
-          0
+          1
         ],
         [
           "Con sus padres",
-          0
+          1
         ],
         [
           "Con familiares con los que no vive habitualmente",
-          0
+          1
         ],
         [
           "Con un grupo de amigos",
-          0
+          1
         ],
         [
           "Con el centro escolar",
-          0
+          1
         ]
       ]
     },
@@ -506,23 +508,23 @@
       "respuestas": [
         [
           "A diario",
-          0
+          5
         ],
         [
           "Varias veces por semana",
-          0
+          4
         ],
         [
           "Una vez por semana",
-          0
+          3
         ],
         [
           "Una vez al mes",
-          0
+          2
         ],
         [
           "Menos de una vez al mes",
-          0
+          1
         ],
         [
           "Nunca",
@@ -647,9 +649,6 @@
         ],
         [
           0
-        ],
-        [
-          0
         ]
       ],
       "respuestas": [
@@ -667,10 +666,6 @@
         ],
         [
           "Técnico",
-          0
-        ],
-        [
-          "Secundaria, Artes-Oficios o similares",
           0
         ],
         [
