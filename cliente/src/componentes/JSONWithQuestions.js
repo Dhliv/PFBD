@@ -65,7 +65,7 @@ class JSONWithQuestions {
         name: nombre,
         title: posPregunta !== -1 ? pregunta : titulo,
         inputType: "number",
-        //isRequired: true,
+        isRequired: true,
         hasNone: false,
         colCount: Math.max(1, Math.floor(nCol / 2)),
         choices: choices

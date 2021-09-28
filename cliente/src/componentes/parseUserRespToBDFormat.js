@@ -1,11 +1,15 @@
 import { categorias, puntaje, categoriasPresupuesto } from "./JSONWithQuestions"
-import { Registroinfo } from "../Registroinfo";
 import insertIntoTable from "../json/insertIntoTable.json";
 
-var categories;
-var score;
-var infousuario = [];
+var categories; // Array de categorías que pertenecen a a una respuesta en un momento de tiempo dado.
+var score; // puntaje que se le asigna a la respuesta.
+var infousuario = []; // Ya que la información que se almacena en usuarios está dispersa a lo largo de la encuesta, se hace necesario guardar cada dato en una queue para su posterior inserción.
 
+/**
+ * 
+ * @param {*} table 
+ * @param {*} data 
+ */
 function saveParsedAnswer(table, data) {
   let aux = {
     table: "",
@@ -17,6 +21,12 @@ function saveParsedAnswer(table, data) {
   insertIntoTable.toInsert = insertIntoTable.toInsert.concat(aux);
 }
 
+/**
+ * Determina la tabla en la que va la respectiva respuesta, guardando en un array la información que le corresponde a esa misma tabla.
+ * 
+ * @param {String} nombrePregunta Identifica a una pregnta de tipo presupuesto para identificar a la categor+ia que pertenece.
+ * @param {String} answer Almacena un trozo de información del usuario para su almacenamiento global en 'infousuario'.
+ */
 function parseAnswerForBD(nombrePregunta, answer) {
   let category;
   let table;

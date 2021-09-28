@@ -7,6 +7,11 @@ import { Registroinfo } from "../Registroinfo";
 Survey.StylesManager.applyTheme("bootstrap");
 Survey.defaultBootstrapCss.navigationButton = "btn btn-red";
 
+/**
+ * Listener que identifica cuando ocurre un cambio en los campos de la survey.
+ * @param {*} sender 
+ * @param {*} options 
+ */
 var surveyValueChanged = function (sender, options) {
   var el = document.getElementById(options.name);
   if (el) {
