@@ -8,6 +8,7 @@ class Registroinfo {
     const doAll = async () => {
       checkAnswers(answers);
       console.log(insertIntoTable.toInsert);
+
       const userPos = insertIntoTable.toInsert.length - 1;
       const genero = (await axios.post('basedatos/getIdGenero', { "genero": insertIntoTable.toInsert[userPos].info[0] })).data.idGenero;
       const edad = parseInt(insertIntoTable.toInsert[userPos].info[1]);
@@ -16,6 +17,7 @@ class Registroinfo {
       const ocupacion = (await axios.post('basedatos/getIdOcupacion', { "ocupacion": insertIntoTable.toInsert[userPos].info[4] })).data.idOcupacion;
       const estudio = (await axios.post('basedatos/getIdEstudio', { "estudio": insertIntoTable.toInsert[userPos].info[5] })).data.idEstudio;
       console.log(genero, edad, gastoSemanal, conQuienSale, ocupacion, estudio);
+
       const idUsuario = (await axios.post('basedatos/insertUsuario', {
         "genero": genero, "edad": edad, "gastoSemanal": gastoSemanal, "conQuienSale": conQuienSale, "ocupacion": ocupacion, "estudio": estudio
       }
