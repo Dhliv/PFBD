@@ -25,6 +25,16 @@ class Registroinfo {
       for (let i = 0; i < userPos; i++) {
         let table = insertIntoTable.toInsert[i].table;
         let info = insertIntoTable.toInsert[i].info;
+
+        if (table === "respuestas") {
+          const insert = await axios.post('basedatos/insertRespuesta', {
+            "usuarioID": idUsuario, "idEvento": info[0], "score": info[1]
+          });
+        } else if (table === "presupuestos") {
+          const insert = await axios.post('basedatos/insertPresupuesto', {
+            "idUsuario": idUsuario, "idEvento": info[0], "presupuesto": parseInt(info[1])
+          });
+        }
       }
     }
 

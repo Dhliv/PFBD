@@ -20,11 +20,11 @@ module.exports = router;
  * Inserta una respuesta del usuario en la BD.
  */
 router.post('/insertRespuesta', async (req, res) => {
-  const { usuarioID, idRespuesta, idEvento, score } = req.body;
+  const { usuarioID, idEvento, score } = req.body;
   await client.query(
-    `insert into respuesta values('${usuarioID}', '${idRespuesta}', '${idEvento}', '${score}');`
+    `insert into respuesta(id_usuario, id_evento, puntaje) values(${usuarioID}, ${idEvento}, ${score});`
   )
-  res.send(console.log("xd"));
+  res.send("All Good");
 })
 
 /**
@@ -33,9 +33,20 @@ router.post('/insertRespuesta', async (req, res) => {
 router.post('/insertUsuario', async (req, res) => {
   const { genero, edad, gastoSemanal, conQuienSale, ocupacion, estudio } = req.body;
   const idUsuario = await client.query(
-    `insert into usuario(id_genero, id_estudio, id_ocupacion, id_con_quien_sale, edad, gasto_semanal_ocio) values(${genero}, ${estudio}, ${ocupacion}, ${conQuienSale}, ${edad}, ${gastoSemanal}) returning id_usuario;`
+    `insert into usuarioa(id_genero, id_estudio, id_ocupacion, id_con_quien_sale, edad, gasto_semanal_ocio) values(${genero}, ${estudio}, ${ocupacion}, ${conQuienSale}, ${edad}, ${gastoSemanal}) returning id_usuario;`
   );
   res.send({ "idUsuario": idUsuario.rows[0].id_usuario });
+});
+
+/**
+ * Inserta un nuevo presupuesto en la tabla de 'presupuestos' para un usuario.
+ */
+router.post('/insertPresupuesto', async (req, res) => {
+  const { idUsuario, idEvento, presupuesto } = req.body;
+  const nothing = await client.query(
+    `insert into presupuestos values(${idUsuario}, ${idEvento}, ${presupuesto});`
+  );
+  res.send("All Good");
 });
 
 /**
