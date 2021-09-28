@@ -22,7 +22,7 @@ module.exports = router;
 router.post('/insertRespuesta', async (req, res) => {
   const { usuarioID, idEvento, score } = req.body;
   await client.query(
-    `insert into respuesta(id_usuario, id_evento, puntaje) values(${usuarioID}, ${idEvento}, ${score});`
+    `insert into respuestas(id_usuario, id_evento, puntaje) values(${usuarioID}, ${idEvento}, ${score});`
   )
   res.send("All Good");
 })
