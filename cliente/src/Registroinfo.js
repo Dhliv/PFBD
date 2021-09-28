@@ -8,7 +8,7 @@ class Registroinfo {
    * Inserta en la BD la información pertinente a 'respuestas' y 'presupuestos'.
    * @param {int} idUsuario Id del usuario que llena la encuesta. 
    */
-  insertRespuestasAndPresupuestos(idUsuario) {
+  static async insertRespuestasAndPresupuestos(idUsuario, userPos) {
     for (let i = 0; i < userPos; i++) {
       let table = insertIntoTable.toInsert[i].table;
       let info = insertIntoTable.toInsert[i].info;
@@ -47,7 +47,7 @@ class Registroinfo {
       }
       )).data.idUsuario;
 
-      insertRespuestasAndPresupuestos(idUsuario);
+      this.insertRespuestasAndPresupuestos(idUsuario, userPos);
     }
 
     doAll();
