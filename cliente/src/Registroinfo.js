@@ -10,8 +10,8 @@ class Registroinfo {
       console.log(insertIntoTable.toInsert);
       const userPos = insertIntoTable.toInsert.length - 1;
       const genero = (await axios.post('basedatos/getIdGenero', { "genero": insertIntoTable.toInsert[userPos].info[0] })).data.idGenero;
-      const edad = insertIntoTable.toInsert[userPos].info[1];
-      const gastoSemanal = insertIntoTable.toInsert[userPos].info[2];
+      const edad = parseInt(insertIntoTable.toInsert[userPos].info[1]);
+      const gastoSemanal = parseInt(insertIntoTable.toInsert[userPos].info[2]);
       const conQuienSale = (await axios.post('basedatos/getIdConQuienSale', { "conQuienSale": insertIntoTable.toInsert[userPos].info[3] })).data.idconQuienSale;
       const ocupacion = (await axios.post('basedatos/getIdOcupacion', { "ocupacion": insertIntoTable.toInsert[userPos].info[4] })).data.idOcupacion;
       const estudio = (await axios.post('basedatos/getIdEstudio', { "estudio": insertIntoTable.toInsert[userPos].info[5] })).data.idEstudio;
@@ -21,6 +21,11 @@ class Registroinfo {
       }
       )).data.idUsuario;
       console.log(idUsuario);
+
+      for (let i = 0; i < userPos; i++) {
+        let table = insertIntoTable.toInsert[i].table;
+        let info = insertIntoTable.toInsert[i].info;
+      }
     }
 
     doAll();
