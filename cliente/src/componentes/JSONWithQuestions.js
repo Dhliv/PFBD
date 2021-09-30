@@ -58,13 +58,21 @@ class JSONWithQuestions {
         categoriasPresupuesto.set(nombre, questions[posTitulo].pertenecen[0]);
     }
 
+    let restriction;
+    if(tipo == "text") restriction = "numeric"
+    else restriction = "text";
     // Se crea un json con el formato adecuado.
     let question = [
       {
         type: tipo,
         name: nombre,
         title: posPregunta !== -1 ? pregunta : titulo,
-        inputType: "number",
+        validators: [
+            {
+                type: restriction,
+                minValue: 0
+            }
+        ],
         isRequired: true,
         hasNone: false,
         colCount: Math.max(1, Math.floor(nCol / 2)),
