@@ -6,9 +6,10 @@ var score; // puntaje que se le asigna a la respuesta.
 var infousuario = []; // Ya que la información que se almacena en usuarios está dispersa a lo largo de la encuesta, se hace necesario guardar cada dato en una queue para su posterior inserción.
 
 /**
- * 
- * @param {*} table 
- * @param {*} data 
+ * Inserta en el JSON insertIntoTable una tupla de datos, especificando la tabla a la que pertenece y la informcación que debe ir en ella.
+ *  
+ * @param {String} table nombre de la tabla donde se insertan los datos
+ * @param {Array[Object]} data la información que debe insertarse en la tabla indicada
  */
 function saveParsedAnswer(table, data) {
   let aux = {
