@@ -93,6 +93,15 @@ router.post('/getIdConQuienSale', async (req, res) => {
   res.send({ "idconQuienSale": idconQuienSale.rows[0].id_con_quien_sale });
 });
 
+router.post('/checkusuarioExistence', async (req, res) => {
+  const { idUsuario } = req.body;
+  const exists = await client.query(
+    `select * from usuarios where id_usuario='${idUsuario}';`
+  )
+
+  res.send(exists.rowCount === 0 ? false : true);
+});
+
 /**
  * Obtiene el puntaje total obtenido por evento.
  */

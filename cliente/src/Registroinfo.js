@@ -35,18 +35,23 @@ class Registroinfo {
 
       const userPos = insertIntoTable.toInsert.length - 1;
       const idUsuario = insertIntoTable.toInsert[userPos].info[0];
-      const genero = (await axios.post('basedatos/getIdGenero', { "genero": insertIntoTable.toInsert[userPos].info[1] })).data.idGenero;
-      const edad = parseInt(insertIntoTable.toInsert[userPos].info[2]);
-      const gastoSemanal = parseInt(insertIntoTable.toInsert[userPos].info[3]);
-      const conQuienSale = (await axios.post('basedatos/getIdConQuienSale', { "conQuienSale": insertIntoTable.toInsert[userPos].info[4] })).data.idconQuienSale;
-      const ocupacion = (await axios.post('basedatos/getIdOcupacion', { "ocupacion": insertIntoTable.toInsert[userPos].info[5] })).data.idOcupacion;
-      const estudio = (await axios.post('basedatos/getIdEstudio', { "estudio": insertIntoTable.toInsert[userPos].info[6] })).data.idEstudio;
 
-      const insertUsuario = await axios.post('basedatos/insertUsuario', {
-        "idUsuario": idUsuario, "genero": genero, "edad": edad, "gastoSemanal": gastoSemanal, "conQuienSale": conQuienSale, "ocupacion": ocupacion, "estudio": estudio
-      });
+      const usuarioExists = await (await axios.post('basedatos/checkusuarioExistence', { "idUsuario": idUsuario })).data;
 
-      this.insertRespuestasAndPresupuestos(idUsuario, userPos);
+      if (!usuarioExists) {
+        const genero = (await axios.post('basedatos/getIdGenero', { "genero": insertIntoTable.toInsert[userPos].info[1] })).data.idGenero;
+        const edad = parseInt(insertIntoTable.toInsert[userPos].info[2]);
+        const gastoSemanal = parseInt(insertIntoTable.toInsert[userPos].info[3]);
+        const conQuienSale = (await axios.post('basedatos/getIdConQuienSale', { "conQuienSale": insertIntoTable.toInsert[userPos].info[4] })).data.idconQuienSale;
+        const ocupacion = (await axios.post('basedatos/getIdOcupacion', { "ocupacion": insertIntoTable.toInsert[userPos].info[5] })).data.idOcupacion;
+        const estudio = (await axios.post('basedatos/getIdEstudio', { "estudio": insertIntoTable.toInsert[userPos].info[6] })).data.idEstudio;
+
+        const insertUsuario = await axios.post('basedatos/insertUsuario', {
+          "idUsuario": idUsuario, "genero": genero, "edad": edad, "gastoSemanal": gastoSemanal, "conQuienSale": conQuienSale, "ocupacion": ocupacion, "estudio": estudio
+        });
+
+        this.insertRespuestasAndPresupuestos(idUsuario, userPos);
+      } else console.log("Usted ya hizo una encuesta");
     }
 
     doAll();
