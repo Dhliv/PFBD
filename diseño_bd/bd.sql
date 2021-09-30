@@ -32,7 +32,7 @@ CREATE TABLE eventos
 (id_evento SERIAL PRIMARY KEY, nombre_evento VARCHAR);
 
 CREATE TABLE usuarios
-(id_usuario SERIAL PRIMARY KEY, id_genero int, id_estudio int,
+(id_usuario varchar(12) PRIMARY KEY, id_genero int, id_estudio int,
     id_ocupacion int, id_con_quien_sale int, edad int, gasto_semanal_ocio int,
     FOREIGN KEY(id_genero) REFERENCES generos,
     FOREIGN KEY(id_estudio) REFERENCES estudios,
@@ -40,12 +40,12 @@ CREATE TABLE usuarios
     FOREIGN KEY(id_con_quien_sale) REFERENCES con_quien_sale_habitualmente);
     
 CREATE TABLE presupuestos
-(id_usuario int, id_evento int, presupuesto int,
+(id_usuario varchar(12), id_evento int, presupuesto int,
     FOREIGN KEY(id_usuario) REFERENCES usuarios,
     FOREIGN KEY(id_evento) REFERENCES eventos);
 
 CREATE TABLE respuestas
-(id_respuesta SERIAL PRIMARY KEY, id_usuario int, id_evento int, puntaje int,
+(id_respuesta SERIAL PRIMARY KEY, id_usuario varchar(12), id_evento int, puntaje int,
     FOREIGN KEY(id_usuario) REFERENCES usuarios,
     FOREIGN KEY(id_evento) REFERENCES eventos);
 

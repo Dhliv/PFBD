@@ -14,11 +14,11 @@ class Registroinfo {
       let info = insertIntoTable.toInsert[i].info;
 
       if (table === "respuestas") {
-        const insert = await axios.post('basedatos/insertRespuesta', {
+        const insertRespuesta = await axios.post('basedatos/insertRespuesta', {
           "usuarioID": idUsuario, "idEvento": info[0], "score": info[1]
         });
       } else if (table === "presupuestos") {
-        const insert = await axios.post('basedatos/insertPresupuesto', {
+        const insertPresupuesto = await axios.post('basedatos/insertPresupuesto', {
           "idUsuario": idUsuario, "idEvento": info[0], "presupuesto": parseInt(info[1])
         });
       }
@@ -32,20 +32,19 @@ class Registroinfo {
   static getAnswersAndUploadThem(answers) {
     const doAll = async () => {
       checkAnswers(answers);
-      console.log(insertIntoTable.toInsert);
 
       const userPos = insertIntoTable.toInsert.length - 1;
-      const genero = (await axios.post('basedatos/getIdGenero', { "genero": insertIntoTable.toInsert[userPos].info[0] })).data.idGenero;
-      const edad = parseInt(insertIntoTable.toInsert[userPos].info[1]);
-      const gastoSemanal = parseInt(insertIntoTable.toInsert[userPos].info[2]);
-      const conQuienSale = (await axios.post('basedatos/getIdConQuienSale', { "conQuienSale": insertIntoTable.toInsert[userPos].info[3] })).data.idconQuienSale;
-      const ocupacion = (await axios.post('basedatos/getIdOcupacion', { "ocupacion": insertIntoTable.toInsert[userPos].info[4] })).data.idOcupacion;
-      const estudio = (await axios.post('basedatos/getIdEstudio', { "estudio": insertIntoTable.toInsert[userPos].info[5] })).data.idEstudio;
+      const idUsuario = insertIntoTable.toInsert[userPos].info[0];
+      const genero = (await axios.post('basedatos/getIdGenero', { "genero": insertIntoTable.toInsert[userPos].info[1] })).data.idGenero;
+      const edad = parseInt(insertIntoTable.toInsert[userPos].info[2]);
+      const gastoSemanal = parseInt(insertIntoTable.toInsert[userPos].info[3]);
+      const conQuienSale = (await axios.post('basedatos/getIdConQuienSale', { "conQuienSale": insertIntoTable.toInsert[userPos].info[4] })).data.idconQuienSale;
+      const ocupacion = (await axios.post('basedatos/getIdOcupacion', { "ocupacion": insertIntoTable.toInsert[userPos].info[5] })).data.idOcupacion;
+      const estudio = (await axios.post('basedatos/getIdEstudio', { "estudio": insertIntoTable.toInsert[userPos].info[6] })).data.idEstudio;
 
-      const idUsuario = (await axios.post('basedatos/insertUsuario', {
-        "genero": genero, "edad": edad, "gastoSemanal": gastoSemanal, "conQuienSale": conQuienSale, "ocupacion": ocupacion, "estudio": estudio
-      }
-      )).data.idUsuario;
+      const insertUsuario = await axios.post('basedatos/insertUsuario', {
+        "idUsuario": idUsuario, "genero": genero, "edad": edad, "gastoSemanal": gastoSemanal, "conQuienSale": conQuienSale, "ocupacion": ocupacion, "estudio": estudio
+      });
 
       this.insertRespuestasAndPresupuestos(idUsuario, userPos);
     }

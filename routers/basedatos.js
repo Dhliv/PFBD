@@ -28,14 +28,14 @@ router.post('/insertRespuesta', async (req, res) => {
 })
 
 /**
- * Inserta un nuevo usuario en la base de datosy retorn su id.
+ * Inserta un nuevo usuario en la base de datos.
  */
 router.post('/insertUsuario', async (req, res) => {
-  const { genero, edad, gastoSemanal, conQuienSale, ocupacion, estudio } = req.body;
-  const idUsuario = await client.query(
-    `insert into usuarios(id_genero, id_estudio, id_ocupacion, id_con_quien_sale, edad, gasto_semanal_ocio) values(${genero}, ${estudio}, ${ocupacion}, ${conQuienSale}, ${edad}, ${gastoSemanal}) returning id_usuario;`
+  const { idUsuario, genero, edad, gastoSemanal, conQuienSale, ocupacion, estudio } = req.body;
+  const insert = await client.query(
+    `insert into usuarios values('${idUsuario}', ${genero}, ${estudio}, ${ocupacion}, ${conQuienSale}, ${edad}, ${gastoSemanal});`
   );
-  res.send({ "idUsuario": idUsuario.rows[0].id_usuario });
+  res.send("All Good");
 });
 
 /**
