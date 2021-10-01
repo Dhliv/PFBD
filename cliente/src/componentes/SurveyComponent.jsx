@@ -5,7 +5,6 @@ import neoQ from "../json/neoQ.json";
 import { Registroinfo } from "../Registroinfo";
 
 Survey.StylesManager.applyTheme("bootstrap");
-Survey.defaultBootstrapCss.navigationButton = "btn btn-red";
 
 /**
  * Listener que identifica cuando ocurre un cambio en los campos de la survey.
@@ -27,7 +26,7 @@ function SurveyComponent() {
 
   //console.log(neoQ);
   const survey = new Survey.Model(neoQ);
-
+  
   survey
     .onComplete
     .add(function (sender) {

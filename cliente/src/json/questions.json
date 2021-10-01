@@ -47,6 +47,24 @@
   ],
   "questions": [
     {
+      "tipoPregunta": 4,
+      "titulo": "Digite el número de su documento de identidad",
+      "presupuesto": 0,
+      "categorias": [
+        [
+          0
+        ]
+      ],
+      "respuestas": [
+        [
+          "[C.C., T.I.]",
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
       "tipoPregunta": 1,
       "titulo": "Indique su género",
       "presupuesto": 0,
