@@ -32,20 +32,20 @@ CREATE TABLE eventos
 (id_evento SERIAL PRIMARY KEY, nombre_evento VARCHAR);
 
 CREATE TABLE usuarios
-(id_usuario SERIAL PRIMARY KEY, id_genero int, id_estudio int,
+(id_usuario varchar(12) PRIMARY KEY, id_genero int, id_estudio int,
     id_ocupacion int, id_con_quien_sale int, edad int, gasto_semanal_ocio int,
     FOREIGN KEY(id_genero) REFERENCES generos,
     FOREIGN KEY(id_estudio) REFERENCES estudios,
     FOREIGN KEY(id_ocupacion) REFERENCES ocupaciones,
     FOREIGN KEY(id_con_quien_sale) REFERENCES con_quien_sale_habitualmente);
-    
+
 CREATE TABLE presupuestos
-(id_usuario int, id_evento int, presupuesto int,
+(id_usuario varchar(12), id_evento int, presupuesto int,
     FOREIGN KEY(id_usuario) REFERENCES usuarios,
     FOREIGN KEY(id_evento) REFERENCES eventos);
 
 CREATE TABLE respuestas
-(id_respuesta SERIAL PRIMARY KEY, id_usuario int, id_evento int, puntaje int,
+(id_respuesta SERIAL PRIMARY KEY, id_usuario varchar(12), id_evento int, puntaje int,
     FOREIGN KEY(id_usuario) REFERENCES usuarios,
     FOREIGN KEY(id_evento) REFERENCES eventos);
 
@@ -105,14 +105,3 @@ select id_usuario, genero, nombre_estudio, nombre_ocupacion, persona_con_quien_s
 	from usuarios natural join generos natural join estudios natural join ocupaciones
 		natural join con_quien_sale_habitualmente
 */
-
---INSERCION DE LOS USUARIOS
---1, Hombre, Primaria, Empleado, Con conyuge, 42, 250000
-INSERT INTO usuarios(id_genero, id_estudio, id_ocupacion, id_con_quien_sale, edad, gasto_semanal_ocio)
-    VALUES(1, 2, 3, 2, 42, 250000);
---2, Mujer, Tecnico, Empleado y Estudiante, Con padres, 22, 80000
-INSERT INTO usuarios(id_genero, id_estudio, id_ocupacion, id_con_quien_sale, edad, gasto_semanal_ocio)
-    VALUES(2, 4, 2, 3, 22, 80000);
---3, Mujer, No contesta, Desempleado, Con amigos, 19, 50000
-INSERT INTO usuarios(id_genero, id_estudio, id_ocupacion, id_con_quien_sale, edad, gasto_semanal_ocio)
-    VALUES(2, 7, 4, 5, 19, 50000);
